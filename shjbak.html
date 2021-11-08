@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1024城迹-shj</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<div id="graph03"></div>
+
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/china.js"></script>
+		<script>
+			// 动态地图：基于准备好的dom，初始化echarts实例
+			var mapBoxEchart = echarts.init(document.getElementById('graph03'));
+			var geoCoordMap = { //可以在地图上显示的城市的坐标信息
+				'西安': [108.9500, 34.2666],
+				'成都': [103.9526, 30.7617],
+				'重庆': [106.4500, 29.5666],
+				'兰州': [103.7333, 36.0333],
+				'西宁': [101.7500, 36.5666],
+				'银川': [106.2666, 38.4666],
+
+				'安康': [109.01, 32.41],
+				'宝鸡': [107.09, 34.22],
+				'商洛': [109.57, 33.52],
+				'延安': [109.28, 36.35],
+				'榆林': [109.74, 38.29],
+				'乌审旗': [108.825, 38.61],
+				'天水': [105.73, 34.58],
+				'吴忠': [106.20, 38.00],
+				'石嘴山': [106.38, 38.99],
+				'庆阳': [107.64, 35.71],
+				'北海': [109.12, 21.48],
+				'桂林': [110.18, 25.24],
+				'丽江': [100.23, 26.86],
+				'大理': [100.30, 25.68]
+			};     
+			var HFData = [ // 数据中name的城市名称必须与geoCoordMap中城市名称一致, 不然关联不上，西安到各地区的线路
+				[{name: '西安'}, {name: '西安', value: 100}],
+				[{name: '西安'}, {name: '成都', value: 50}],
+				[{name: '西安'}, {name: '重庆', value: 50}],
+				[{name: '西安'}, {name: '兰州', value: 50}],
+				[{name: '西安'}, {name: '西宁', value: 50}],
+				[{name: '西安'}, {name: '银川', value: 50}],
+
+				[{name: '西安'}, {name: '安康', value: 25}],
+				[{name: '西安'}, {name: '宝鸡', value: 25}],
+				[{name: '西安'}, {name: '商洛', value: 25}],
+				[{name: '西安'}, {name: '延安', value: 25}],
+				[{name: '西安'}, {name: '榆林', value: 25}],
+				[{name: '西安'}, {name: '乌审旗', value: 25}],
+				[{name: '西安'}, {name: '天水', value: 25}],
+				[{name: '西安'}, {name: '吴忠', value: 25}],
+				[{name: '西安'}, {name: '石嘴山', value: 25}],
+				[{name: '西安'}, {name: '庆阳', value: 25}],
+				[{name: '西安'}, {name: '北海', value: 25}],
+				[{name: '西安'}, {name: '桂林', value: 25}],
+				[{name: '西安'}, {name: '丽江', value: 25}],
+				[{name: '西安'}, {name: '大理', value: 25}]
+			];
+			var planePath = 'arrow'; // 箭头的svg arrow
+			// push进去线路开始-结束地点-经纬度
+			var convertData = function(data) {
+				var res = [];
+				for(var i = 0; i < data.length; i++) {
+					var dataItem = data[i];
+					var fromCoord = geoCoordMap[dataItem[0].name];
+					var toCoord = geoCoordMap[dataItem[1].name];
+					if(fromCoord && toCoord) {
+						res.push([{
+							coord: fromCoord
+						}, {
+							coord: toCoord
+						}]);
+					}
+				}
+				return res;
+			};
+			var color = ['#fff', '#FFFFA8', '#46bee9']; //圆圈和字的颜色，线的颜色，箭头颜色
+			// 数据
+			var series = [];
+			// 遍历由西安到其他城市的线路
+			[
+				['西安', HFData]
+			].forEach(function(item, i) {
+				// 配置
+				series.push({
+					// 系列名称，用于tooltip的显示
+					name: item[0],
+					type: 'lines',
+					zlevel: 1, // 用于 Canvas 分层，不同zlevel值的图形会放置在不同的 Canvas 中
+					// effect出发到目的地 的白色尾巴线条 线特效的配置
+					effect: {
+						show: false, //true
+						period: 6, // 特效动画的时间，单位为 s
+						trailLength: 0.4, // 特效尾迹的长度。取从 0 到 1 的值，数值越大尾迹越长
+						color: '#46bee9', // 移动箭头颜色
+						symbol: planePath,
+						symbolSize: 6 // 特效标记的大小
+					},
+					// lineStyle出发到目的地 的线条颜色
+					lineStyle: {
+						normal: {
+							color: color[i], //color[i]
+							width: 0,
+							curveness: 0.2 //幅度
+						}
+					},
+					data: convertData(item[1]) //开始到结束数据
+				}, {
+					//出发地信息
+					name: item[0],
+					type: 'lines',
+					zlevel: 2,
+					effect: {
+						show: true,
+						period: 6,
+						trailLength: 0,
+						symbol: planePath,
+						symbolSize: 6
+					},
+					lineStyle: {
+						normal: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+								offset: 0,
+								color: '#FFFFA8' // 出发
+							}, {
+								offset: 1,
+								color: '#58B3CC ' // 结束 颜色
+							}], false),
+							width: 1.5,
+							opacity: 0.4,
+							curveness: 0.2
+						}
+					},
+					data: convertData(item[1])
+				}, {
+					// 目的地信息
+					name: item[0],
+					type: 'effectScatter',
+					coordinateSystem: 'geo',
+					zlevel: 2,
+					rippleEffect: {
+						brushType: 'stroke'
+					},
+					label: {
+						normal: {
+							show: true,
+							position: 'right',
+							formatter: '{b}'
+						}
+					},
+					symbolSize: function(val) {
+						return val[2] / 8;
+					},
+					itemStyle: {
+						normal: {
+							color: color[i]
+						}
+					},
+					data: item[1].map(function(dataItem) {
+						return {
+							name: dataItem[1].name,
+							value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+						};
+					})
+				});
+			});
+
+			// 指定相关的配置项和数据
+			var mapBoxOption = {
+				backgroundColor:{
+					color: '#00a0c9'
+				},
+				title: {
+					text: 'SongHaiJun`s 人生足跡',
+					left: '2%',
+					top: '2%',
+					textStyle: {
+						color: '#fff',
+						fontFamily: 'Consolas'
+					}
+				},
+				geo: {
+					map: 'china',
+					roam: true, // 是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+					aspectScale: 0.75,
+					zoom: 1.20,
+					label: {
+						normal: {
+							show: false,
+							textStyle: {
+								color: '#00a0c9'
+							}
+						},
+						emphasis: { // 对应的鼠标悬浮效果
+							show: true,
+							textStyle: {
+								color: "purple"
+							}
+						}
+					},
+					itemStyle: {
+						normal: {
+							areaColor: '#0083ce',
+							borderColor: '#0066ba'
+						},
+						emphasis: {
+							borderWidth: 0,
+							borderColor: '#0066ba',
+							areaColor: "#0494e1",
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				},
+				series: series
+			};
+			// 使用制定的配置项和数据显示图表
+			mapBoxEchart.setOption(mapBoxOption);
+			// echart图表自适应
+			window.addEventListener("resize", function() {
+				mapBoxEchart.resize();
+			});
+		</script>
+	</body>
+
+</html>

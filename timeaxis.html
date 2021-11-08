@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>时间轴</title>
+    <link href="synwayui/timeaxis/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="a11"></div>
+
+    <script type="text/javascript" src="synwayui/timeaxis/js/jquery.js"></script>
+    <script type="text/javascript" src="synwayui/timeaxis/js/jquery.min.js"></script>
+    <script type="text/javascript" src="synwayui/timeaxis/js/timeaxis.js"></script>
+    <script type="text/javascript">
+        let obj = [];
+        
+        let year = ['1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002',
+                    '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013',
+                    '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024',
+                    '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036'];
+        let xzzGrade = ['','','','','','','','','','','','','','','','','','','','','','','','','','3岁小班', '4岁中班', '5岁大班', '6岁一年级', '7岁二年级', '8岁三年级', '9岁四年级', '10岁五年级', '11岁六年级', '12岁七年级', '13岁八年级', '14岁九年级', '15岁高一',
+                        '16岁高二', '17岁高三', '18岁大一', '19岁大二', '20岁大三', '21岁大四', '22岁毕业'];
+        let niGrade = ['降生','1岁','2岁','3岁','4岁','5岁学前班', '6岁一年级', '7岁二年级', '8岁三年级', '9岁四年级', '10岁五年级', '11岁六年级', '12岁七年级', '13岁八年级', '14岁九年级', '15岁高一',
+            '16岁高二', '17岁高三', '18岁高四', '19岁大一', '20岁大二', '21岁大三', '22岁大四','23岁毕业', '社会','','','','','','','','','','','','','','','','','','',''];
+        let woGrade = ['降生','1岁','2岁','3岁','4岁','5岁学前班', '6岁一年级', '7岁二年级', '8岁三年级', '9岁四年级', '10岁五年级', '11岁五年级', '12岁六年级', '13岁七年级', '14岁八年级', '15岁九年级', '16岁高一',
+            '17岁高二', '18岁高三', '19岁高四', '20岁大一', '21岁大二', '22岁大三', '23岁大四', '24岁毕业','','','','','','','','','','','','','','','','','','','',''];
+        let person = ['小侄子', '你', '我'];
+
+        for (let i = 0; i < year.length; i++) {
+            let item = {};
+            let info = [];
+            item.LAST_TIME = year[i];
+            if((parseInt(year[i]) >= 1997 && parseInt(year[i]) < 2016) || (parseInt(year[i]) >= 2017 && parseInt(year[i]) < 2036)){
+                item.LAST_TIME = year[i]+'-09-01';
+            }else if ((parseInt(year[i]) == 2016) || (parseInt(year[i]) == 2036)){
+                item.LAST_TIME = year[i]+'-07-01';
+            }
+            item.INTRO = '学历阶段';
+			if(parseInt(year[i]) <= 1996 ){
+				item.INTRO = '初始化';
+			}
+
+
+            if(parseInt(year[i]) >= 2017){
+                info.push(person[0]+'：'+xzzGrade[i]);
+            }
+            if(parseInt(year[i]) < 2017) {
+                info.push(person[1] + '：' + niGrade[i]);
+                info.push(person[2]+'：'+woGrade[i]);
+            }
+            item.INFO = info;
+            obj.push(item);
+        }
+        
+        /*let item1={};
+        item1.LAST_TIME="2010-08-20";
+        item1.INTRO="标题1：******************";
+        info.push("内容1*****");
+        info.push("内容2*****");
+        info.push("内容3*****");
+        item1.INFO=info;
+        obj.push(item1);
+
+        let info2=[];
+        info2.push("内容1*****");
+        info2.push("内容2*****");
+        let item2={};
+        item2.LAST_TIME="2000-08-20";
+        item2.INTRO="标题2：******************";
+        item2.INFO=info2;
+        obj.push(item2);
+
+        let info3=[];
+        info3.push("内容1*****");
+        let item3={};
+        item3.LAST_TIME="2000-01-20";
+        item3.INTRO="标题3：******************";
+        item3.INFO=info3;
+        obj.push(item3);*/
+
+        $.timeaxis.load(obj,'a11');
+        //$.timeaxis.get(集合,放置所在的div的ID);
+        //一个对象内必须有LAST_TIME 时间 INTRO标题  INFO 信息
+        //其中信息为集合
+        //时间按正序或倒序排列
+
+    </script>
+</body>
+</html>

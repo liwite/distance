@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>synwayui导航</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+<link href="bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
+<link href="themes/default/css/common.css" rel="stylesheet">
+
+
+
+<style type="text/css">
+* {
+	font-family: 'Microsoft YaHei';
+}
+
+body {
+	margin-top: 50px;
+	margin-left: 50px;
+	padding-right: 50px
+}
+.panel-hr> hr{
+	margin:10px 0px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">synwayui-api</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#api" class="dropdown-toggle">API汇总</a></li>
+					<li><a href="#synwayui" class="dropdown-toggle">synwayui</a></li>
+					<li><a href="#theme" class="dropdown-toggle">theme</a></li>
+					<li><a href="#bootstrap" class="dropdown-toggle">bootstrap</a></li>
+					<li><a href="#jquery" class="dropdown-toggle">jquery</a></li>
+					<li><a href="#angular" class="dropdown-toggle">angular</a></li>
+					<li><a href="#wijmo" class="dropdown-toggle">wijmo</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<div class="container-fluid">
+
+		<div id="synwayui" class="panel panel-primary" style="margin-top: 30px;">
+			<div class="panel-heading">API汇总</div>
+			<div class="panel-body panel-hr">
+				<a href="#" onclick="window.open('/synwayui/themes/default/page/font_demonstrate.html');">字体图标库-API-for-SNAPSHOT</a>
+				<hr >
+				<a href="#" onclick="window.open('http://www.repo.s/angular/docs/')"> angular-API-for-1.3.15 </a>
+				<hr >
+				<a onclick="window.open('http://192.168.0.244:8080/wijmo5demo/default.htm#/')"> wijmo-API-for-5 </a>
+			</div>
+		</div>
+		<div id="synwayui" class="panel panel-success" style="margin-top: 30px;">
+			<div class="panel-heading">synwayui</div>
+			<div class="panel-body panel-hr">
+				<strong>html公共文件头</strong>
+				<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html class=""&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+&lt;meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+							</pre>
+				<hr >
+				<strong> <a href="#" id="btn-log" class="text-primary">普通提醒</a>
+				</strong>
+				<pre>$.synwayui.log("haha"); 
+							</pre>
+				<hr >
+				<strong> <a href="#" id="btn-success" class="text-success">成功提醒</a>
+				</strong>
+				<p class="list-group-item-text">
+				<pre>$.synwayui.success("haha");
+							</pre>
+				</p>
+				<hr >
+				<strong> <a href="#" id="btn-error" class="text-danger">错误提醒</a>
+				</strong>
+				<p class="list-group-item-text">
+				<pre>$.synwayui.error("haha");
+							</pre>
+				</p>
+				<hr >
+				<strong>验证身份证号是否合法</strong>
+				<p class="list-group-item-text">
+				<pre>$.synwayui.checkIDCardNumber(idcard);
+							</pre>
+				</p>
+
+				<hr >
+				<strong>IP转long</strong>
+				<p class="list-group-item-text">
+				<pre>$.synwayui.convertIPToLongfunction(ipStr, isMark);
+							</pre>
+				</p>
+
+			</div>
+			<div class="panel-footer">收录所有公司自主研发的前端插件，及样式库，目录地址：/synwayui/synwayui/</div>
+		</div>
+		<div id="theme" class="panel panel-info">
+			<div class="panel-heading">themes</div>
+			<div class="panel-body panel-hr">
+				<a onclick="window.open('themes/default/css/common.css')">公共样式文件</a>
+				<hr >
+				<a onclick="window.open('themes/default/css/synway_icons.css')">字体图标样式文件</a>
+			</div>
+			<div class="panel-footer">公共主题样式文件目录:/synwayui/themes/，可重写部分bootstrap样式，规范字体，提供多个主题可切换，主题里包含公共图标库，每个图标都有至少三种尺寸选择，根据每种业务设计统一的图标，命名规范需要参考业务及用途
+			</div>
+		</div>
+
+		<div id="bootstrap" class="panel panel-info">
+			<div class="panel-heading">bootstrap</div>
+			<div class="panel-body">
+				<a onclick="window.open('bootstrap/plugins/validator')">验证控件</a> <a
+					onclick="window.open('/synwayui/bootstrap/plugins/validator/0.5.1/demo/index.html')"> Demo </a>
+			</div>
+			<div class="panel-footer">Bootstrap主文件目录:/synwayui/bootstrap/，参考版本3.3.4</div>
+		</div>
+		<div id="jquery" class="panel panel-info">
+			<div class="panel-heading">jquery</div>
+			<div class="panel-body panel-hr">
+				<a onclick="window.open('jquery/plugins/alertify')"> 消息控件
+					<hr/>
+				</a> <a onclick="window.open('jquery/plugins/treeview')"> 树形控件
+					<hr/>
+				</a> <a onclick="window.open('jquery/plugins/echarts')"> 图形化控件 </a> <a onclick="window.open('jquery/plugins/echarts/2.1.8/demo/index.html')"> Demo
+					<hr/>
+				</a> <a onclick="window.open('jquery/plugins/paginator')"> 分页控件
+					<hr/>
+				</a> <a onclick="window.open('jquery/plugins/fileinput')"> 文件上传控件
+					<hr/>
+				</a> <a onclick="window.open('jquery/plugins/wysiwyg')"> 文本编辑控件
+					<hr/>
+				</a> <a onclick="window.open('jquery/plugins/datetimepicker')"> 日期控件 </a> <a
+					onclick="window.open('jquery/plugins/datetimepicker/2.3.4/sample in bootstrap v3/index.html')"> Demo
+					<hr/>
+				</a> <a onclick="window.open('jquery/plugins/loading/v1.0.0/js')"> 文件加载 </a> <a onclick="window.open('jquery/plugins/loading/v1.0.0/index.html')">
+					Demo
+						<hr/> 
+					</a>
+					<a onclick="window.open('jquery/plugins/rightmenu/v1.0.0/js')"> 右击菜单 </a> <a onclick="window.open('jquery/plugins/rightmenu/v1.0.0/right_menu.html')">Demo</a>
+			</div>
+			<div class="panel-footer">Jquery主文件目录:/synwayui/jquery/，参考版本1.11.2，子目录plugins收录所有基于jquery的插件</div>
+		</div>
+		<div id="angular" class="panel panel-info">
+			<div class="panel-heading">angular</div>
+			<div class="panel-body">
+				<a onclick="window.open('synwayui/angular')">AngularJs主文件目录</a>
+			</div>
+			<div class="panel-footer">为了和wijmo兼容, 参考版本1.2.5</div>
+		</div>
+		<div id="wijmo" class="panel panel-info">
+			<div class="panel-heading">wijmo</div>
+			<div class="panel-body">
+				<a onclick="window.open('/synwayui/wijimo')">Wijmo主文件目录</a>
+			</div>
+			<div class="panel-footer">参考版本5.20151.42（试用版），正式版本待定</div>
+		</div>
+
+
+	</div>
+</body>
+
+<script src="jquery/1.11.2/jquery-1.11.2.min.js"></script>
+<script src="bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="synwayui/synwayui.js"></script>
+<script type="text/javascript">
+	$('#btn-alert').click(function() {
+		$.synwayui.alert("haha");
+	});
+	$('#btn-log').click(function() {
+		$.synwayui.log("haha");
+	});
+	$('#btn-success').click(function() {
+		$.synwayui.success("haha");
+	});
+	$('#btn-error').click(function() {
+		$.synwayui.error("haha");
+	});
+</script>
+
+</html>

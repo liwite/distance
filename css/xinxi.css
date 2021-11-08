@@ -1,0 +1,84 @@
+.wrap {
+	height: 100%;
+	overflow: hidden;
+}
+
+.panel {
+	margin-bottom: 16px;
+	height: calc(50% - 8px);
+}
+
+.panel-body {
+	height: calc(100% - 35px);
+}
+
+.contl {
+	width: 456px;
+	height: 100%;
+	margin-right: 15px;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.2);
+	border-radius: 4px;
+}
+
+.contr {
+	flex: 1;
+	/*display: flex;
+	flex-direction: column;*/
+}
+
+.cont-table {
+	height: 100%;
+	overflow: hidden;
+}
+.cont-table .table {
+	margin: 0;
+	text-align: center;
+	border-bottom: solid 1px #dbdbdb;
+	height: 100%;
+	margin: 0;
+	color: #333333;
+	font-size: 12px;
+	border: none;
+}
+
+.cont-table tbody {
+	display: block;
+	width: 100%;
+	height: calc(100% - 33px);
+}
+
+.cont-table thead,
+.cont-table tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.table>tbody>tr>td {
+	border-top: none;
+	border-bottom: solid 1px #dbdbdb;
+}
+
+.table>thead>tr>th {
+	text-align: center;
+	background-color: #f4f6f8;
+	border: none;
+	color: #666666;
+}
+
+.table>tbody>tr:nth-of-type(even) {
+	background-color: #f7fbff;
+}
+
+.table>tbody>tr:hover {
+	background-color: #ecfaff;
+}
+
+.contr .panel {
+	flex: 1;
+}
+
+.contr .panel:nth-child(2) {
+	margin: 0;
+}

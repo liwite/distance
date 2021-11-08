@@ -1,0 +1,153 @@
+.content {
+	height: calc(100% - 111px);
+	margin-top: 16px;
+	flex-direction: column;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.2);
+}
+
+.table {
+	color: #333333;
+	font-size: 12px;
+}
+
+.cont-table-action {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
+
+.icon-sz {
+	margin-right: 54px;
+}
+
+.cont-table-wrap {
+	/*height: calc(100% - 62px);*/
+	overflow: hidden;
+}
+
+.cont-table {
+	height: 100%;
+	margin: 0;
+	color: #333333;
+	font-size: 12px;
+	border: none;
+}
+
+.cont-table tbody {
+	display: block;
+	width: 100%;
+	height: calc(100% - 40px);
+}
+
+.cont-table thead,
+.cont-table tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.cont-table.table-bordered>thead>tr>th {
+	background: #edf4f7;
+	border-width: 1px;
+	border-top: solid 1px #dbdbdb!important;
+}
+
+.table-bordered>tbody>tr>td {
+	height: 40px;
+	padding: 0;
+	line-height: 40px;
+	border-top: none;
+}
+
+.topbar {
+	padding: 20px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.2);
+}
+
+form .form-group:first-of-type .form-control {
+	width: 350px;
+	height: 30px;
+	border-radius: 2px;
+	border: solid 1px #dbdbdb;
+}
+
+form .form-group:first-of-type+.form-group {
+	margin-left: 50px;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"]+.toggle {
+	position: relative;
+	width: 39px;
+	height: 16px;
+	margin: 10px 0;
+	border: solid 1px #c7c7c7;
+	border-radius: 10px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input[type="checkbox"]:checked+.toggle {
+	border: solid 1px #25bf75;
+}
+
+input[type="checkbox"]+.toggle span {
+	position: absolute;
+	right: 2px;
+	top: 1px;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-color: #c7c7c7;
+	border-radius: 6px;
+}
+
+input[type="checkbox"]:checked+.toggle span {
+	position: absolute;
+	right: 0;
+	left: 2px;
+	background-color: #25bf75;
+}
+
+.topbar .btn-default:hover {
+	width: 72px;
+	height: 30px;
+	padding: 0;
+	line-height: 30px;
+	color: #FFFFFF;
+	background-color: #609cff;
+	border-radius: 2px;
+	border: solid 1px #609cff;
+}
+
+.topbar .btn-default {
+	width: 72px;
+	height: 30px;
+	padding: 0;
+	line-height: 30px;
+	color: #609cff;
+	border-radius: 2px;
+	border: solid 1px #609cff;
+}
+
+.topbar .btn-default .icon-reset {
+	background: url(../images/reset_on.png) no-repeat;
+}
+
+.topbar .btn-default .icon-search {
+	background: url(../images/search.png) no-repeat;
+}
+
+.topbar .btn-default:hover .icon-reset {
+	background: url(../images/reset.png) no-repeat;
+}
+
+.topbar .btn-default:hover .icon-search {
+	background: url(../images/search2.png) no-repeat;
+}

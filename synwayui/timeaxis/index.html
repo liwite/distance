@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>时间轴</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="a11"></div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/timeaxis.js"></script>
+<script type="text/javascript">
+
+	var obj=[];
+	var info=[];
+	var item1={};
+	item1.LAST_TIME="2010-08-20";
+	item1.INTRO="标题1：******************";
+	info.push("内容1*****");
+	info.push("内容2*****");
+	info.push("内容3*****");
+	item1.INFO=info;
+	obj.push(item1);
+
+	var info2=[];	
+	info2.push("内容1*****");
+	info2.push("内容2*****");
+	var item2={};
+	item2.LAST_TIME="2000-08-20";
+	item2.INTRO="标题2：******************";
+	item2.INFO=info2;
+	obj.push(item2);
+	
+	var info3=[];	
+	info3.push("内容1*****");
+	var item3={};
+	item3.LAST_TIME="2000-08-20";
+	item3.INTRO="标题3：******************";
+	item3.INFO=info3;
+	obj.push(item3);
+	$.timeaxis.load(obj,'a11');
+	//$.timeaxis.get(集合,放置所在的div的ID);
+	//一个对象内必须有LAST_TIME 时间 INTRO标题  INFO 信息
+	//其中信息为集合
+	//时间按正序或倒序排列
+
+
+</script>
+	
+</body>
+</html>

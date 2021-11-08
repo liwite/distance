@@ -1,0 +1,23 @@
+﻿<div>
+    <div class="copy">
+        <h3>
+            Chart LineMarker</h3>
+        <p>
+            This view shows the line chart with a vertical marker that follows the mouse pointer and displays data values for all series objects.
+        </p>
+    </div>
+    <div>
+
+        <!-- the chart -->
+        <wj-flex-chart class="chart"
+                       control="ctx.chart"
+                       chart-type="Line"
+                       items-source="ctx.itemsSource"
+                       binding-x="date"
+                       tooltip-content="">
+            <wj-flex-chart-series binding="input" name="Input"></wj-flex-chart-series>
+            <wj-flex-chart-series binding="output" name="Output"></wj-flex-chart-series>
+        </wj-flex-chart>
+    </div>
+
+</div>

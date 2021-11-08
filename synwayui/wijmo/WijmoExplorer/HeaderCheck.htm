@@ -1,0 +1,13 @@
+<!-- mark this as an Angular application and give it a controller -->
+<div ng-app="app" ng-controller="appCtrl">
+    
+    <h1>Header Checkbox Example</h1>
+        
+    <wj-flex-grid
+      items-source="data" 
+      item-formatter="itemFormatter">
+        <wj-flex-grid-column header="Name" binding="name"></wj-flex-grid-column>
+        <wj-flex-grid-column header="Age" binding="age"></wj-flex-grid-column>
+        <wj-flex-grid-column header="Active" binding="active"></wj-flex-grid-column>
+    </wj-flex-grid>
+</div>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Z点人员管控-人员</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/renyuan.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--header-->
+			<div class="header clearfix">
+				<div class="logo pull-left"></div>
+				<div class="header-nav">
+					<ul>
+						<li class="header-nav-li">
+							<a href="index.html">首页</a>
+						</li>
+						<li class="header-nav-li active">
+							<a href="renyuan.html">重点管理人员</a>
+						</li>
+						<li class="header-nav-li">
+							<a href="xinxi.html">信息预警</a>
+						</li>
+						<li class="header-nav-li">
+							<a href="jifen.html">积分设置</a>
+						</li>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<i class="icon-notice"></i>
+					<i class="icon-sysset"></i>
+					<div class="line"></div>
+					<figure class="pic pull-right"><img src="images/pic.png" />
+						<figcaption class="pull-right">系统管理员</figcaption>
+					</figure>
+				</div>
+			</div>
+			<!--header-->
+			<div class="topbar">
+				<form role="form" class="form-inline">
+					<div class="row">
+						<div class="form-group col-md-3 col-sm-4 col-xs-12">
+							<label>案件名称：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-3 col-sm-4 col-xs-12 text-center">
+							<label>案件类型：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-3 col-sm-4 col-xs-12 text-center">
+							<label>涉案企业名称：</label>
+							<select class="form-control">
+								<option>请选择</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+						<div class="form-group col-md-3 col-sm-4 col-xs-12 text-right">
+							<label>涉案网络平台：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-3 col-sm-4 col-xs-12">
+							<label>户籍住址：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-3 col-sm-4 col-xs-12 text-center">
+							<label>投资人姓名：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-3 col-sm-4 col-xs-12 text-center">
+							<label>身份证号：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-3 col-sm-4 col-xs-12 text-right">
+							<label>联系电话：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-3 col-sm-4 col-xs-12">
+							<label>涉及地市：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-3 col-sm-6 col-xs-12 text-center">
+							<label>现住地址：</label>
+							<input type="text" class="form-control" />
+						</div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12 text-right">
+							<button type="submit" class="btn btn-primary"><i class="icon-search"></i>查询</button>
+							<button type="reset" class="btn btn-default"><i class="icon-reset"></i>重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!--content-->
+			<div class="content clearfix">
+				<div class="cont-operate">
+					<button type="button" class="btn" data-toggle="modal" data-target="#modal3">人员录入</button>
+					<button type="button" class="btn">批量删除</button>
+					<button type="button" class="btn">批量导入</button>
+					<button type="button" class="btn" data-toggle="modal" data-target="#modal1">重点人布控</button>
+					<button type="button" class="btn" data-toggle="modal" data-target="#modal2">事件布控</button>
+				</div>
+				<div class="cont-table-wrap">
+					<table class="table table-bordered cont-table">
+						<thead>
+							<tr>
+								<th>序号</th>
+								<th>案件名称</th>
+								<th>案件类别</th>
+								<th>涉案企业名称</th>
+								<th>涉案网络平台</th>
+								<th>主办地机关</th>
+								<th>投资人姓名</th>
+								<th>人员类别</th>
+								<th>身份证号</th>
+								<th>联系电话</th>
+								<th>涉及地市</th>
+								<th>户籍住址</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>案件名称</td>
+								<td>非法吸收公众存款</td>
+								<td>某某公司</td>
+								<td>好友帮众</td>
+								<td>天津公安局</td>
+								<td>张小三</td>
+								<td>借款人</td>
+								<td>650108197609278990</td>
+								<td>18023456789</td>
+								<td>乌鲁木齐</td>
+								<td>乌鲁木齐市新兴街人民路38号</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="contb-pagination text-center">
+					<ul class="pagination">
+						<li class="disabled">
+							<a href="#">上一页</a>
+						</li>
+						<li class="active">
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#">下一页</a>
+						</li>
+						<li class="goto">
+							<div class="input-group clearfix">
+								<span class="input-group-addon pull-left">跳转</span>
+								<input type="text" class="form-control">
+								<span class="input-group-addon">页</span>
+							</div>
+						</li>
+					</ul>
+					<span class="contb-pagination-current">当前第1/25页</span>
+				</div>
+			</div>
+			<!--content-->
+
+		</div>
+
+		<div class="modal fade modal1" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">重点人布控</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<ul>
+								<li class="modal1-list">
+									<input type="checkbox" id="t1" /><label for="t1">银行数据</label>
+									<ul class="row">
+										<li class="col-md-2"><input type="checkbox" id="t1d1" /><label for="t1d1">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+									</ul>
+								</li>
+								<li class="modal1-list">
+									<input type="checkbox" id="t1" /><label for="t1">一体化数据</label>
+									<ul class="row">
+										<li class="col-md-2"><input type="checkbox" id="t1d1" /><label for="t1d1">酒店住宿</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">火车订票</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">飞机订票</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">汽车订票</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">网吧上网</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">卡口数据</label></li>
+									</ul>
+								</li>
+								<li class="modal1-list">
+									<input type="checkbox" id="t1" /><label for="t1">标签特征积分阀值</label>
+									<ul class="row">
+										<li class="col-md-12">
+											<input type="checkbox" id="t1d1" /><label for="t1d1">积分值：</label>
+											<select class="form-control">
+												<option>大于</option>
+												<option>大于</option>
+											</select>
+											<input type="number" class="form-control" />
+										</li>
+									</ul>
+								</li>
+								<li class="modal1-list">
+									<input type="checkbox" id="t1" /><label for="t1">一体化数据</label>
+									<ul class="row">
+										<li class="col-md-2"><input type="checkbox" id="t1d1" /><label for="t1d1">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+
+										<li class="col-md-2"><input type="checkbox" id="t1d1" /><label for="t1d1">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+									</ul>
+								</li>
+							</ul>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">发布</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<div class="modal fade modal1" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">事件布控</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<ul>
+								<li class="modal1-list">
+									<input type="checkbox" id="t1" /><label for="t1">标签特征积分阀值</label>
+									<ul class="row">
+										<li class="col-md-12">
+											<input type="checkbox" id="jifen" /><label for="jifen">积分值：</label>
+											<select class="form-control">
+												<option>大于</option>
+												<option>大于</option>
+											</select>
+											<input type="number" class="form-control" />
+										</li>
+									</ul>
+								</li>
+								<li class="modal1-list">
+									<input type="checkbox" id="t1" /><label for="t1">标签特征</label>
+									<ul class="row">
+										<li class="col-md-2"><input type="checkbox" id="t1d1" /><label for="t1d1">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d3" /><label for="t1d3">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+
+										<li class="col-md-2"><input type="checkbox" id="t1d4" /><label for="t1d4">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d5" /><label for="t1d5">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+										<li class="col-md-2"><input type="checkbox" id="t1d2" /><label for="t1d2">工商银行</label></li>
+									</ul>
+								</li>
+							</ul>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">发布</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<div class="modal fade modal3" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">人员录入</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form" class="form-inline">
+							<div class="row">
+								<div class="form-group col-md-3">
+									<label>案件名称：</label>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group col-md-3">
+									<label>案件类型：</label>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group col-md-3 text-right">
+									<label>涉案企业名称：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-3 text-right">
+									<label>涉案网络平台：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-3">
+									<label>涉及地市：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-3">
+									<label>投资人姓名：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-3 text-right">
+									<label>身份证号：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-3 text-right">
+									<label>联系电话：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-6">
+									<label>户籍住址：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-6 text-right">
+									<label>现住地址：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-3">
+									<label>涉案金额：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-3">
+									<label>主办地公安：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-3 text-right">
+									<label>涉稳情况：</label>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group col-md-3 text-right">
+									<label>重点人员级别：</label>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="bootstrap/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+				//表格滚动
+				var wh = $('.cont-table-wrap').height() - 42;
+				var h = $('.cont-table-wrap tbody tr').length * 41;
+				if(h > wh) {
+					$('.cont-table-wrap tbody').attr('style', 'overflow-y: auto');
+					$('.cont-table-wrap thead').attr('style', 'width: calc(100% - 16px);border: none;');
+					$('.cont-table').attr('style', 'border: 1px solid #ddd;border-left: none;');
+				}
+				//滚动header
+				//				window.addEventListener('scroll',
+				//					function() {
+				//						console.log($('.header').offset().top)
+				//					})
+
+				$('.cont-operate .btn').click(function() {
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+					//					setTimeout(function() {
+					//						console.log($('.modal.fade.in .modal-dialog').height());
+					//						$('.modal.fade.in .modal-dialog').attr('style','margin: ')
+					//					}, 1000);
+				});
+
+				//modal
+				$('.modal').click(function() {
+					$('.btn.active').removeClass('active');
+				})
+				$('.modal .modal-dialog').click(function() {
+					window.event ? window.event.cancelBubble = true : e.stopPropagation();
+				})
+				$('.modal .btn-default').click(function() {
+					$('.modal').modal('hide');
+					$('.btn.active').removeClass('active');
+				})
+				$('.modal .btn-primary').click(function() {
+					$('.modal').modal('hide');
+					$('.btn.active').removeClass('active');
+				})
+				$('.close').click(function() {
+					$('.modal').modal('hide');
+					$('.btn.active').removeClass('active');
+				})
+			});
+		</script>
+	</body>
+
+</html>
+
+<!--<div class="contb-table-head" style="padding-right: 16px;">
+					<table class="table table-bordered cont-table">
+						<thead>
+							<tr>
+								<th width="40">序号</th>
+								<th width="140">案件名称</th>
+								<th width="140">案件类别</th>
+								<th width="140">涉案企业名称</th>
+								<th width="140">涉案网络平台</th>
+								<th width="140">主办地机关</th>
+								<th width="80">投资人姓名</th>
+								<th width="70">人员类别</th>
+								<th width="135">身份证号</th>
+								<th width="110">联系电话</th>
+								<th width="110">涉及地市</th>
+								<th width="200">户籍住址</th>
+								<th width="42"><i class="icon-open"></i></th>
+								<th width="90">操作</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="cont-table-body">
+					<table class="table table-bordered cont-table">
+						<tbody>
+							<tr>
+								<td width="40">1</td>
+								<td width="140">案件名称</td>
+								<td width="140">非法吸收公众存款</td>
+								<td width="140">某某公司</td>
+								<td width="140">好友帮众</td>
+								<td width="140">天津公安局</td>
+								<td width="80">张小三</td>
+								<td width="70">借款人</td>
+								<td width="135">650108197609278990</td>
+								<td width="110">18023456789</td>
+								<td width="110">乌鲁木齐</td>
+								<td width="200">乌鲁木齐市新兴街人民路38号</td>
+								<td width="42"></td>
+								<td width="90">
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>-->

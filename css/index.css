@@ -1,0 +1,279 @@
+.content {
+	height: 100%;
+	padding-bottom: 5px;
+}
+
+.contc {
+	flex: 1;
+	margin: -55px 20px 15px 20px;
+	position: relative;
+}
+
+.contl {
+	width: 300px;
+	flex: 0 0 300px;
+}
+
+.contl .panel {
+	height: calc(33.333% - 15px);
+	margin-bottom: 15px;
+}
+
+.contl .panel:first-of-type .panel-body {
+	padding: 0;
+}
+
+.contl .panel-body,
+.contr .panel-body {
+	height: calc(100% - 35px);
+	padding: 0 15px;
+}
+
+#graph01,
+#graph02,
+#graph04 {
+	width: 100%;
+	height: 100%;
+}
+
+#graph03 {
+	width: 100%;
+	height: 100%;
+	/*height: calc(100% - 50px);
+	margin-top: 50px;*/
+	background-color: #ffffff;
+	box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.2);
+	border-radius: 2px;
+}
+
+.contl-progress1,
+.contl-progress2,
+.contl-progress3 {
+	width: 255px;
+	height: 12px;
+	border-radius: 6px;
+}
+
+.contl-progress-title {
+	margin: 15px 0 4px 0;
+	font-size: 12px;
+	line-height: 16px;
+	color: #666666;
+}
+
+.contl-progress-title span {
+	color: #1ac0e9;
+}
+
+.contl-progress1 {
+	background-color: #ffc5c5;
+}
+
+.contl-progress1 .progress-bar {
+	background-color: #ff5959;
+}
+
+.contl-progress2 {
+	background-color: #ffdbc0;
+}
+
+.contl-progress2 .progress-bar {
+	background-color: #ff974a;
+}
+
+.contl-progress3 {
+	background-color: #c8dcff;
+}
+
+.contl-progress3 .progress-bar {
+	background-color: #609cff;
+}
+
+.contr {
+	width: 320px;
+	flex: 0 0 320px;
+}
+
+.contr .panel {
+	height: calc(66.666% - 15px);
+	margin-bottom: 15px;
+}
+
+.contr .panel:first-of-type {
+	height: calc(33.333% - 15px);
+}
+
+.contr .panel-body {
+	height: calc(100% - 35px);
+	padding: 0;
+	font-size: 12px;
+	line-height: 32px;
+	color: #666666;
+}
+
+.contr-con1-li {
+	padding: 0 12px;
+}
+
+.contr-con1-li:nth-child(odd) {
+	background-color: #f6fbff;
+}
+
+.contr .nav-tabs>li {
+	width: 33.333%;
+	text-align: center;
+}
+
+.contr .nav-tabs>li>a {
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+	background: #f4f6f8;
+	line-height: 32px;
+	border: none;
+	border-top: solid transparent 1px;
+	color: #666666;
+}
+
+.contr .nav-tabs>li.active>a,
+.contr .nav-tabs>li:focus>a,
+.contr .nav-tabs>li:hover>a {
+	color: #59a2ff;
+	border: none;
+	border-top: solid #59a2ff 1px;
+	background: #FFFFFF;
+	font-weight: bold;
+}
+
+.contr-msg .tab-content {
+	height: calc(100% - 43px);
+	padding-top: 2px;
+	overflow: auto;
+}
+
+.contc-operate {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 1000;
+	width: 100%;
+}
+
+.contc-operate .btn-default {
+	height: 30px;
+	padding: 0 18px;
+	margin: 0 6px 0 0;
+	background-color: #ffffff;
+	border-radius: 15px;
+	border: solid 1px #609cff;
+	color: #609cff;
+}
+
+.contc-operate .btn-default:hover {
+	background-color: #609cff;
+	color: #FFFFFF;
+	border: solid 1px #609cff;
+}
+
+.contc-bar .btn-group-justified {
+	width: 56%;
+}
+
+.contc-bar .input-group {
+	width: 42.667%;
+}
+
+.contc-bar .form-control,
+.contc-bar .input-group-btn .btn {
+	border-radius: 0;
+}
+
+.contc-bar .input-group-btn .btn {
+	background-color: #f39026;
+}
+
+.contc-bar .form-inline .input-group .input-group-btn {
+	width: 70px;
+}
+
+.contc-bar .btn-default {
+	/*width: 140px!important;*/
+	height: 36px;
+	border-radius: 0;
+}
+
+.contc-bar .btn-group:not(:first-of-type) .dropdown-toggle {
+	border-left: none;
+}
+
+.contc-bar .dropdown-toggle:hover,
+.contc-bar .dropdown-toggle:focus,
+.contc-bar .dropdown-toggle:active,
+.open>.dropdown-toggle.btn-default,
+.contc-bar .open>.dropdown-toggle.btn-default:focus,
+.contc-bar .open>.dropdown-toggle.btn-default:hover {
+	background-color: #e0f2ff;
+	border-radius: 1px;
+	border: solid 1px #dbdbdb;
+	box-shadow: none;
+}
+
+.btn-group.open .dropdown-toggle {
+	box-shadow: none;
+}
+
+.contc-bar .btn-group-justified {
+	/*width: 420px;*/
+}
+
+.dropdown-menu {
+	width: 100%;
+	padding: 0;
+	min-width: none;
+	border-radius: 1px;
+	text-align: center;
+}
+
+.dropdown-menu li {
+	height: 36px;
+	border-radius: 1px;
+	border: solid 1px #e5e5e5;
+	line-height: 36px;
+}
+
+.dropdown-menu li:hover {
+	background-color: #f4f6f8;
+}
+
+.dropdown-menu>li>a {
+	padding: 7px 20px;
+	font-size: 14px;
+	color: #333333;
+}
+
+.icon-down {
+	display: inline-block;
+	float: right;
+	width: 12px;
+	height: 12px;
+	margin: 4px 0;
+	background: url(../images/3.png) no-repeat center center;
+	vertical-align: middle;
+}
+
+@media only screen and (max-width: 1400px) {
+	.btn-group-justified>.btn-group .btn {
+		padding: 6px 8px;
+	}
+}
+
+@media only screen and (max-width: 1320px) {
+	.btn-group-justified>.btn-group .btn {
+		padding: 6px 4px;
+		font-size: 12px;
+	}
+	.icon-down {
+		width: 8px;
+		height: 8px;
+	}
+}

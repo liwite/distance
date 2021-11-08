@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    
+	<link href="/synwayui/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/synwayui/bootstrap/plugins/validator/0.5.1/dist/css/bootstrapValidator.css"/>
+	<link href="/synwayui/themes/default/css/common.css" rel="stylesheet">
+	<script src="/synwayui/jquery/1.11.2/jquery-1.11.2.js"></script>
+	<script src="/synwayui/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/synwayui/bootstrap/plugins/validator/0.5.1/dist/js/bootstrapValidator.js"></script>	
+<script type="text/javascript" src="/synwayui/bootstrap/plugins/validator/0.5.1/dist/js/language/zh_CN.js"></script>
+	<script src="/synwayui/synwayui/synwayui.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+				$('#myform').bootstrapValidator({
+	        message: '输入是无效的',
+	        feedbackIcons: {
+	            valid: 'glyphicon glyphicon-ok',
+	            invalid: 'glyphicon glyphicon-remove',
+	            validating: 'glyphicon glyphicon-refresh'
+	        },
+	        fields: {
+	        	username: {
+	                message: '用户名输入错误',
+	                validators: {
+	                    notEmpty: {
+	                        message: '用户名必须输入'
+	                    },
+	                    stringLength: {
+	                        min: 6,
+	                        max: 30,
+	                        message: '用户名长度在6个字符到30个字符之间'
+	                    },
+	                    regexp: {
+	                        regexp: /^[a-zA-Z0-9_]+$/,
+	                        message: '用户名只能由字母、数据或下划线组成'
+	                    }
+	                }
+	            },
+	        	inputpassword3: {
+	                message: '密码输入错误。',
+	                validators: {
+	                    notEmpty: {
+	                        message: '密码必须输入'
+	                    },
+	                    stringLength: {
+	                        min: 6,
+	                        message: '密码最短6个字符'
+	                    }
+	                }
+	            }
+	    }});
+	    $(".btn-submit").click(function(event){
+	    if($('#myform').data('bootstrapValidator').isValid()){
+	    		alert("表单有效");
+				$('.myform').submit();
+		}else{
+	    		alert("表单无效");
+	    }
+	    }
+	    );
+	});
+	</script>
+</head>
+  
+  <body>
+ <div class="container">
+<form class="form-horizontal " role="form" name="myform" id="myform">
+ <div class="panel panel-default">
+ <div class="panel-heading"><h4>表单样版</h4></div>
+ <div class="panel-body">
+  <div class="form-group">
+    <span class="col-sm-2 control-label syn-horizontal-label syn-horizontal-col"><span class="syn-horizontal-label syn-require">*</span>用户名：</span>
+    <div class="col-sm-10 syn-horizontal-col">
+      <input type="text" class="form-control syn-horizontal-input" name="username" placeholder="请输入用户名">
+    </div>
+  </div>
+  <div class="form-group">
+    <span class="col-sm-2 control-label  syn-horizontal-label syn-horizontal-col">密码：</span>
+    <div class="col-sm-10 syn-horizontal-col">
+      <input type="password" class="form-control syn-horizontal-input"  name="inputpassword3" placeholder="请输入密码">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10 syn-horizontal-col">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> 是否记住密码
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="panel-footer">  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10 syn-horizontal-col">
+      <button type="button" class=" btn-primary btn-submit btn-l">登录</button>
+    </div>
+  </div>
+  </div>
+ </div>
+</form>
+        <div class="well">
+        <ul>
+        <h3>规范要求：</h3>
+			<li>1.	必填项<span style="color:red;">*</span>标记为红色，出现在标签的最左边；</li>
+			<li>2.	标签名称:14px 微软雅黑；右对齐+全角冒号；样式：control-label syn-horizontal-label syn-horizontal-col</li>
+			<li>3.	输入/选择框:输入/选择框居左对齐。样式：form-control syn-horizontal-input</li>
+			<li>4.	表单验证统一使用:bootstrap-validator控件，在synwayui中可以找到。</li>
+			<li>5.	使用栅格布局时需要稍做修改，使标签和输入框之间的距离间隔缩短。例：col-sm-10 syn-horizontal-col</li>
+			<li>6.	表单中的提交、取消按钮在对话框中时按对话框的规范布局。在一般页面可以居中或与输入框对齐。</li>
+        </ul>
+        
+        </div>
+ </div>
+  </body>
+</html>

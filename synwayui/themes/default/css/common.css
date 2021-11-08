@@ -1,0 +1,270 @@
+* {
+	font-family: 'Microsoft YaHei';
+}
+
+
+
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*-------------- 滚动条样式 ----------------*/
+::-webkit-scrollbar {  
+  width: 18px;  
+  height: 14px;  
+}  
+  
+::-webkit-scrollbar-track,  
+::-webkit-scrollbar-thumb {  
+  border-radius: 999px;  
+  border: 5px solid transparent;  
+}  
+  
+::-webkit-scrollbar-track {  
+  box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;  
+}  
+  
+::-webkit-scrollbar-thumb {  
+  min-height: 20px;  
+  background-clip: content-box;  
+  box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;  
+}  
+  
+::-webkit-scrollbar-corner {  
+  background: transparent;  
+}
+
+
+.syn-panel-default {
+	border-radius: 0px;
+}
+
+.syn-panel-default>.panel-heading {
+	background-color: white;
+}
+
+.form-group {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.syn-panel-heading {
+	border-bottom: 0;
+}
+
+.syn-panel-body {
+	padding: 0 0 0 0;
+	heitht: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.syn-panel-footer {
+	border-top: 0;
+	background: white;
+}
+
+.syn-grid {
+	height: 550px;
+	width: 100%;
+	border-width: 1px;
+}
+
+.syn-modal-title {
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #337ab7;
+}
+
+.syn-btn-footer {
+	margin-right: 15px;
+}
+
+.syn-label {
+	margin-left: 15px;
+}
+
+.syn-horizontal-label {
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+
+.syn-horizontal-col {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.syn-horizontal-input {
+	width: 98%;
+}
+
+.syn-require {
+	color: red;
+}
+
+.syn-input {
+	margin-right: 15px;
+}
+
+.wj-state-selected {
+	background-color: #337ab7;
+	color: #FFF;
+}
+
+.wj-state-multi-selected {
+	background-color: #337ab7;
+	color: #FFF;
+}
+
+/*-------------- 按钮区域 S ----------------*/
+.tools {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 5px
+}
+
+.btn-sm {
+	padding: 3px 15px;
+	font-family: "微软雅黑";
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	border-radius: 2px
+}
+
+.btn-l {
+	padding: 5px 20px;
+	font-family: "微软雅黑";
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid transparent;
+	border-radius: 3px
+}
+
+.btn-default {
+	background: #f7f7f7;
+	color: #333;
+	border-color: #ddd;
+}
+
+.btn-default:focus,.btn-default:hover {
+	background-color: #e0e0e0;
+	border-color: #ccc;
+}
+
+.btn-primary {
+	background: #337ab7;
+	border-color: #337ab7;
+	color: #ffffff
+}
+
+.btn-primary:focus,.btn-primary:hover {
+	background-color: #3b8acd;
+	border-color: #3b8acd
+}
+
+.btn-success {
+	color: #fff;
+	background: #5cb85c;
+	border-color: #5cb85c;
+}
+
+.btn-success:focus,.btn-success:hover {
+	background-color: #65cf65;
+	border-color: #65cf65
+}
+
+.btn-info {
+	color: #fff;
+	background: #5bc0de;
+	border-color: #5bc0de;
+}
+
+.btn-info:focus,.btn-info:hover {
+	background-color: #6cd2f0;
+	border-color: #6cd2f0
+}
+
+.btn-warning {
+	color: #fff;
+	background: #f0ad4e;
+	border-color: #f0ad4e;
+}
+
+.btn-warning:focus,.btn-warning:hover {
+	background-color: #f6b75f;
+	border-color: #f6b75f
+}
+
+.btn-danger {
+	color: #fff;
+	background: #d9534f;
+	border-color: #d9534f;
+}
+
+.btn-danger:focus,.btn-danger:hover {
+	background-color: #ee605b;
+	border-color: #ee605b;
+}
+
+.wj-header {
+	border-right: 1px solid #d2d2d2;
+	text-align: left;
+	background-color: white;
+	color: #444;
+	font-weight: bold;
+}
+/*-------------- 按钮区域 E ----------------*/
+.glyphicon_1 {
+	color: #333;
+	margin-right: 3px
+}
+
+/*-------------- 列表 S ----------------*/
+.list_area {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px
+}
+
+.list {
+	width: 100%;
+	border-collapse: collapse
+}
+
+.list_th {
+	background-image: linear-gradient(to bottom, #fefefe 0, #e1e1e1 100%);
+	border: 1px solid #e1e1e1;
+	line-height: 35px;
+	text-align: left;
+	padding-left: 5px
+}
+
+.list tr {
+	background-color: expression(( this.sectionRowIndex % 2 == 0)?"#000000":"#fafafa");
+}
+
+.list tr td {
+	padding-left: 5px;
+	text-align: left;
+	border: 1px solid #eaeaea;
+	line-height: 30px;
+}
+
+.list_tr1 {
+	background: #fafafa
+}
+
+.list_tr2 {
+	background: #337ab7;
+	color: #ffffff
+}
+
+.page {
+	margin-right: 15px;
+	margin-bottom: 15px;
+	text-align: right
+}
+/*-------------- 列表 E ----------------*/

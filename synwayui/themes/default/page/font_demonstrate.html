@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/synwayui/themes/default/css/synway_privateIcons.css" type="text/css">
+    <link rel="stylesheet" href="/synwayui/themes/default/css/synway_body.css" type="text/css">
+    <link rel="stylesheet" href="/synwayui/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/synwayui/bootstrap/3.3.4/js/bootstrap.min.js" type="text/css">
+    <script src="/synwayui/themes/default/js/jquery.js"></script>
+    <script src="/synwayui/themes/default/js/jquery.colorpicker.js"></script>
+    <title>三汇图标库</title>
+
+</head>
+<body>
+	<div class="navbar navbar-inverse"   role="navigation"  >
+    <div class="navbar-header pull-left"
+         style="margin-top:5px;margin-left:10px">
+        <a href="#" class="navbar-brand">
+            <small>
+                <i class="synway-common-scout-center"></i>
+                <b style="color:lightgrey">三汇图标库</b>
+
+            </small>
+        </a>
+    </div>
+
+    <div class="collapse navbar-collapse pull-right " style="margin-right:5% " >
+        <ul class="nav navbar-nav">
+            <!--<li class="dropdown">
+                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
+                </ul>
+            </li>-->
+            <li class="dropdown" ><a data-toggle="dropdown" href="#demo1">常用业务</a>
+            </li>
+            <li ><a href="#default" >系统通用</a></li>
+            <li  ><a href="#type">数据类型</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="main " style="position: relative;margin-top:0px" >
+
+    <div class="container-fluid pull-right "  >
+        <img src="/synwayui/themes/default/img/colorpicker.png" class="color_icon" id="color" style="cursor:pointer"/>
+        <div class="color_icon" style="background-color: black;margin-left: 2px" onclick = "getColor(this)"></div>
+        <div class="color_icon" style="background-color: #269abc" onclick = "getColor(this)"></div>
+        <div class="color_icon" style="background-color: red" onclick = "getColor(this)"></div>
+        <div class="color_icon" style="background-color: yellow" onclick = "getColor(this)"></div>
+        <div class="color_icon" style="background-color:green" onclick = "getColor(this)"></div>
+        <div class="color_icon" style="background-color:pink" onclick = "getColor(this)"></div>
+        <div class="color_icon" style="background-color:purple" onclick = "getColor(this)"></div>
+    </div>
+     <h4 id="default">系统通用</h4>
+    <div style="margin-top: 30px;position: relative">
+        <ul class="icon_lists clear" id="icon_lists" >
+            <li>
+                <i class="icon iconfont">&#x0109</i>
+                <div class="name" >设置</div>
+                <div class="fontclass">.synway-default-set</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0185</i>
+                <div class="name" >帮助</div>
+                <div class="fontclass">.synway-default-help</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0176</i>
+                <div class="name" >保存</div>
+                <div class="fontclass">.synway-default-save</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0177</i>
+                <div class="name" >取消</div>
+                <div class="fontclass">.synway-default-cancel</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0155</i>
+                <div class="name" >终止</div>
+                <div class="fontclass">.synway-default-stop</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0154</i>
+                <div class="name" >关闭</div>
+                <div class="fontclass">.synway-default-close</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0115</i>
+                <div class="name" >操作成功</div>
+                <div class="fontclass">.synway-default-dosuccess</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0116</i>
+                <div class="name" >未操作</div>
+                <div class="fontclass">.synway-default-notdo</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0117</i>
+                <div class="name" >操作失败</div>
+                <div class="fontclass">.synway-default-dofail</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0102</i>
+                <div class="name" >查询</div>
+                <div class="fontclass">.synway-default-find</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0101</i>
+                <div class="name" >导出</div>
+                <div class="fontclass">.synway-default-exp</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0103</i>
+                <div class="name" >打印</div>
+                <div class="fontclass">.synway-default-stamp</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0163</i>
+                <div class="name" >高级检索</div>
+                <div class="fontclass">.synway-default-highsearch</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0156</i>
+                <div class="name" >个人设置</div>
+                <div class="fontclass">.synway-default-iset</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0157</i>
+                <div class="name" >数据列表设置</div>
+                <div class="fontclass">synway-default-.datacolumset</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0114</i>
+                <div class="name" >对象</div>
+                <div class="fontclass">.synway-default-obj</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0105</i>
+                <div class="name" >卡号</div>
+                <div class="fontclass">.synway-default-cardnum</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0111</i>
+                <div class="name" >机身码</div>
+                <div class="fontclass">.synway-default-framecode</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0112</i>
+                <div class="name" >QQ</div>
+                <div class="fontclass">.synway-default-qq</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0110</i>
+                <div class="name" >微信</div>
+                <div class="fontclass">.synway-default-wechat</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0106</i>
+                <div class="name" >邮箱</div>
+                <div class="fontclass">.synway-default-email</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0107</i>
+                <div class="name" >默认</div>
+                <div class="fontclass">.synway-default-defalut</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0122</i>
+                <div class="name" >摘要信息</div>
+                <div class="fontclass">.synway-default-summarymessage</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0124</i>
+                <div class="name" >语音</div>
+                <div class="fontclass">.synway-default-void</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0187</i>
+                <div class="name" >过滤</div>
+                <div class="fontclass">.synway-default-filter</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0108</i>
+                <div class="name" >分组</div>
+                <div class="fontclass">.synway-default-group</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0104</i>
+                <div class="name" >定位</div>
+                <div class="fontclass">.synway-default-position</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0145</i>
+                <div class="name" >好易通</div>
+                <div class="fontclass">.synway-default-hyt</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0146</i>
+                <div class="name" >小灵通</div>
+                <div class="fontclass">.synway-default-xlt</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0147</i>
+                <div class="name" >国际局</div>
+                <div class="fontclass">.synway-default-internationoffice</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0200</i>
+                <div class="name" >手机号</div>
+                <div class="fontclass">.synway-default-phone</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0213</i>
+                <div class="name" >添加</div>
+                <div class="fontclass">.synway-default-add</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0219</i>
+                <div class="name" >更多</div>
+                <div class="fontclass">.synway-default-more</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0220</i>
+                <div class="name" >修改</div>
+                <div class="fontclass">.synway-default-edit</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0216</i>
+                <div class="name" >男</div>
+                <div class="fontclass">.synway-default-boy</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0217</i>
+                <div class="name" >女</div>
+                <div class="fontclass">.synway-default-girl</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0210</i>
+                <div class="name" >身份证</div>
+                <div class="fontclass">.synway-default-idcard</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0218</i>
+                <div class="name" >地址</div>
+                <div class="fontclass">.synway-default-address</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0211</i>
+                <div class="name" >物品</div>
+                <div class="fontclass">.synway-default-bag</div>
+            </li>
+
+        </ul>
+
+
+    </div>
+    <h4 style="margin-top: 40px"  id="demo1">常用业务</h4>
+    <div style="margin-top: 30px;position: relative">
+
+        <p class="p_position" style="font-size: 18px;"><i class="iconfont" style="font-size: 25px">&#x0130</i> 侦控中心</p>
+        <hr>
+
+        <ul class="icon_lists clear" id="icon_lists" >
+            <li>
+                <i class="icon iconfont" >&#x0130</i>
+                <div class="name" >侦控中心</div>
+                <div class="fontclass" >
+                    .synway-common-scout-center</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0131</i>
+                <div class="name" >侦控综合检索</div>
+                <div class="fontclass">.synway-common-synthesizes-search</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0128</i>
+                <div class="name" >布撤控申请</div>
+                <div class="fontclass">.synway-common-onoffline-ask</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0178</i>
+                <div class="name" >打标</div>
+                <div class="fontclass">.synway-common-hittab</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0179</i>
+                <div class="name" >一标</div>
+                <div class="fontclass">.synway-common-onetab</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0180</i>
+                <div class="name" >二标</div>
+                <div class="fontclass">.synway-common-twotab</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0181</i>
+                <div class="name" >三标</div>
+                <div class="fontclass">.synway-common-threetab</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0160</i>
+                <div class="name" >号码实时状态</div>
+                <div class="fontclass">.synway-common-telrelstatus</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0161</i>
+                <div class="name" >号码操作记录查询</div>
+                <div class="fontclass">.synway-common-teloperate-record</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0162</i>
+                <div class="name" >快速默认检索</div>
+                <div class="fontclass">.synway-common-findquick</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0164</i>
+                <div class="name" >历史记录检索</div>
+                <div class="fontclass">.synway-common-findhistory</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0166</i>
+                <div class="name" >布控操作</div>
+                <div class="fontclass">.synway-common-bkoperate</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0167</i>
+                <div class="name" >布控记录</div>
+                <div class="fontclass">.synway-common-bkrecord</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0168</i>
+                <div class="name" >撤控操作</div>
+                <div class="fontclass">.synway-common-ckoperate</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0169</i>
+                <div class="name" >撤控记录</div>
+                <div class="fontclass">.synway-common-ckrecord</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0170</i>
+                <div class="name" >布控申请</div>
+                <div class="fontclass">.synway-common-bkask</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0171</i>
+                <div class="name" >撤控申请</div>
+                <div class="fontclass">.synway-common-ckask</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0172</i>
+                <div class="name" >侦控实时轨迹</div>
+                <div class="fontclass">.synway-common-zkrel-track</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0173</i>
+                <div class="name" >侦控导出</div>
+                <div class="fontclass">.synway-common-zkexp</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0174</i>
+                <div class="name" >列表打印</div>
+                <div class="fontclass">.synway-common-listing-print</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0175</i>
+                <div class="name" >翻听打印</div>
+                <div class="fontclass">.synway-common-ftstamp</div>
+            </li>
+
+
+            <li>
+                <i class="icon iconfont">&#x0125</i>
+                <div class="name" >案件名</div>
+                <div class="fontclass">.synway-common-casename</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0132</i>
+                <div class="name" >侦控状态</div>
+                <div class="fontclass">.synway-common-zkstatus</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0186</i>
+                <div class="name" >时间过滤</div>
+                <div class="fontclass">.synway-common-timefilter</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0134</i>
+                <div class="name" >关键字过滤</div>
+                <div class="fontclass">.synway-common-keyfilter</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0135</i>
+                <div class="name" >分组过滤</div>
+                <div class="fontclass">.synway-commongroupfilter-</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0136</i>
+                <div class="name" >布撤控操作</div>
+                <div class="fontclass">.synway-common-onoffine-do</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0137</i>
+                <div class="name" >移动3G</div>
+                <div class="fontclass">.synway-common-move3g</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0138</i>
+                <div class="name" >联通3G</div>
+                <div class="fontclass">.synway-common-link3g</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0139</i>
+                <div class="name" >电信3G</div>
+                <div class="fontclass">.synway-common-tel3g</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0140</i>
+                <div class="name" >移动GSM</div>
+                <div class="fontclass">.synway-common-movegsm</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0141</i>
+                <div class="name" >联通GSM</div>
+                <div class="fontclass">.synway-common-linkgsm</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0142</i>
+                <div class="name" >电信GSM</div>
+                <div class="fontclass">.synway-common-movegsm</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0143</i>
+                <div class="name" >固网</div>
+                <div class="fontclass">.synway-common-fixednet</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0144</i>
+                <div class="name" >IP电话</div>
+                <div class="fontclass">.synway-common-iptel</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0149</i>
+                <div class="name" >布控</div>
+                <div class="fontclass">.synway-common-bk</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0150</i>
+                <div class="name" >撤控</div>
+                <div class="fontclass">.synway-common-ck</div>
+            </li>
+        </ul>
+        <hr>
+        <p class="p_position" style="font-size: 18px;"><i class="iconfont" style="font-size: 25px">&#x0209</i> 全息档案</p>
+        <hr>
+            <ul class="icon_lists clear" id="icon_lists" >
+                <li>
+                    <i class="icon iconfont">&#x0202</i>
+                    <div class="name" >姓名</div>
+                    <div class="fontclass" >
+                        .synway-common-name</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0203</i>
+                    <div class="name" >相关人员</div>
+                    <div class="fontclass" >
+                        .synway-common-relevance-people</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0204</i>
+                    <div class="name" >通信信息</div>
+                    <div class="fontclass" >
+                        .synway-common-correspond-message</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0205</i>
+                    <div class="name" >关系</div>
+                    <div class="fontclass" >
+                        .synway-common-relation</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0206</i>
+                    <div class="name" >软件</div>
+                    <div class="fontclass" >
+                        .synway-common-software</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0208</i>
+                    <div class="name" >触网</div>
+                    <div class="fontclass" >
+                        .synway-common-touchnet</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0209</i>
+                    <div class="name" >人工资料</div>
+                    <div class="fontclass" >
+                        .synway-common-labourdata</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0221</i>
+                    <div class="name" >档案日志</div>
+                    <div class="fontclass" >
+                        .synway-common-fileslog</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0210</i>
+                    <div class="name" >基本信息</div>
+                    <div class="fontclass" >
+                        .synway-common-basicmessage</div>
+                </li>
+                <li>
+                    <i class="icon iconfont">&#x0212</i>
+                    <div class="name" >档案备注</div>
+                    <div class="fontclass" >
+                        .synway-common-filesremark</div>
+                </li>
+            </ul>
+
+
+    </div>
+   
+    <h4 id="type">数据类型</h4>
+    <div style="margin-top: 30px;position: relative">
+        <ul class="icon_lists clear" id="icon_lists" >
+            <li>
+                <i class="icon iconfont">&#x0120</i>
+                <div class="name" >Http</div>
+                <div class="fontclass">.synway-type-http</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0119</i>
+                <div class="name" >Im</div>
+                <div class="fontclass">.synway-type-im</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0121</i>
+                <div class="name" >网络购物</div>
+                <div class="fontclass">.synway-type-shopping</div>
+            </li>
+
+            <li>
+                <i class="icon iconfont">&#x0183</i>
+                <div class="name" >1201</div>
+                <div class="fontclass">.synway-type-otzo</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0182</i>
+                <div class="name" >vpdn</div>
+                <div class="fontclass">.synway-type-vpdn</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#x0148</i>
+                <div class="name" >4G风光</div>
+                <div class="fontclass">.synway-type-4glight</div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+function getColor(node){
+    var i_list=document.getElementsByTagName("i");
+    for(var i=0;i<i_list.length;i++){
+        i_list[i].style.color=node.style.backgroundColor;
+    }
+}
+
+$(function(){
+    $("#color").colorpicker({
+        fillcolor:true,
+        success:function(o,color){
+            var i_list=document.getElementsByTagName("i");
+            for(var i=0;i<i_list.length;i++){
+                i_list[i].style.color=color;
+            }
+
+        }
+    });
+});
+</script>
+
+</html>

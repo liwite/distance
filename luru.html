@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Z点人员管控-事件录入</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/renyuan.css" />
+	</head>
+
+	<body>
+		<div class="wrap luru">
+			<!--header-->
+			<div class="header clearfix">
+				<div class="logo pull-left"></div>
+				<div class="header-nav">
+					<ul>
+						<li class="header-nav-li">
+							<a href="index.html">首页</a>
+						</li>
+						<li class="header-nav-li active">
+							<a href="renyuan.html">重点管理人员</a>
+						</li>
+						<li class="header-nav-li">
+							<a href="xinxi.html">信息预警</a>
+						</li>
+						<li class="header-nav-li">
+							<a href="jifen.html">积分设置</a>
+						</li>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<i class="icon-notice"></i>
+					<i class="icon-sysset"></i>
+					<div class="line"></div>
+					<figure class="pic pull-right"><img src="images/pic.png" />
+						<figcaption class="pull-right">系统管理员</figcaption>
+					</figure>
+				</div>
+			</div>
+			<!--header-->
+			<div class="topbar">
+				<form role="form" class="form-inline">
+					<div class="form-group">
+						<label>案件名称：</label>
+						<input type="text" class="form-control" />
+					</div>
+					<button type="submit" class="btn btn-primary"><i class="icon-search"></i>查询</button>
+					<button type="reset" class="btn btn-default"><i class="icon-reset"></i>重置</button>
+				</form>
+			</div>
+			<!--content-->
+			<div class="content clearfix">
+				<div class="cont-operate">
+					<button type="button" class="btn" data-toggle="modal" data-target="#modal3">事件录入</button>
+					<button type="button" class="btn">批量删除</button>
+					<button type="button" class="btn">事件布控</button>
+				</div>
+				<div class="cont-table-wrap">
+					<table class="table table-bordered cont-table">
+						<thead>
+							<tr>
+								<th><input type="checkbox" id="all" /><label for="all"></label></th>
+								<th>序号</th>
+								<th>事件编号</th>
+								<th>事件名称</th>
+								<th>事件描述</th>
+								<th>创建时间</th>
+								<th>创建人</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" id="open1" /><label for="open1"></label></td>
+								<td>1</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="open2" /><label for="open2"></label></td>
+								<td>2</td>
+								<td>001</td>
+								<td>非法吸收公众存款</td>
+								<td>非法吸收公众存款</td>
+								<td>2019-05-30 17：30：35</td>
+								<td>天津公安局</td>
+								<td>
+									<div class="cont-table-action"><i class="icon-edit"></i><i class="icon-del"></i><i class="icon-view"></i></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="contb-pagination text-center">
+					<ul class="pagination">
+						<li class="disabled">
+							<a href="#">上一页</a>
+						</li>
+						<li class="active">
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#">下一页</a>
+						</li>
+						<li class="goto">
+							<div class="input-group clearfix">
+								<span class="input-group-addon pull-left">跳转</span>
+								<input type="text" class="form-control">
+								<span class="input-group-addon">页</span>
+							</div>
+						</li>
+					</ul>
+					<span class="contb-pagination-current">当前第1/25页</span>
+				</div>
+			</div>
+			<!--content-->
+		</div>
+		<div class="modal fade modal3 luru-modal3" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">事件录入</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form" class="form-inline">
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>事件名称：</label>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label>事件编号：</label>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group col-md-12">
+									<label>事件描述：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-6">
+									<label>创建人：</label>
+									<input type="text" class="form-control" />
+								</div>
+								<div class="form-group col-md-6">
+									<label>创建时间：</label>
+									<input type="text" class="form-control" />
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">保存</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="bootstrap/bootstrap.min.js"></script>
+		<script>
+			$(function() {
+				//表格滚动
+				var wh = $('.cont-table-wrap').height() - 42;
+				var h = $('.cont-table-wrap tbody tr').length * 41;
+				if(h > wh) {
+					$('.cont-table-wrap tbody').attr('style', 'overflow-y: auto');
+					$('.cont-table-wrap thead').attr('style', 'width: calc(100% - 16px);border: none;');
+					$('.cont-table').attr('style', 'border: 1px solid #ddd;border-left: none;');
+				}
+
+				$('.cont-operate .btn').click(function() {
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+					//					setTimeout(function() {
+					//						console.log($('.modal.fade.in .modal-dialog').height());
+					//						$('.modal.fade.in .modal-dialog').attr('style','margin: ')
+					//					}, 1000);
+				});
+
+				//modal
+				$('.modal').click(function() {
+					$('.btn.active').removeClass('active');
+				})
+				$('.modal .modal-dialog').click(function() {
+					window.event ? window.event.cancelBubble = true : e.stopPropagation();
+				})
+				$('.modal .btn-default').click(function() {
+					$('.modal').modal('hide');
+					$('.btn.active').removeClass('active');
+				})
+				$('.modal .btn-primary').click(function() {
+					$('.modal').modal('hide');
+					$('.btn.active').removeClass('active');
+				})
+				$('.close').click(function() {
+					$('.modal').modal('hide');
+					$('.btn.active').removeClass('active');
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,351 @@
+.content {
+	display: block;
+	height: calc(100% - 195px);
+	padding: 20px 20px 10px 20px;
+	margin: 0;
+	/*flex-direction: column;*/
+	background: #FFFFFF;
+	box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.2);
+	overflow: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+	.col-sm-4,
+	.col-sm-6 {
+		text-align: left!important;
+	}
+}
+
+.cont-table-wrap {
+	height: calc(100% - 101px);
+	overflow: hidden;
+}
+
+.cont-table {
+	height: 100%;
+	margin: 0;
+	color: #333333;
+	font-size: 12px;
+	border: none;
+}
+
+.cont-table tbody {
+	display: block;
+	width: 100%;
+	height: calc(100% - 40px);
+}
+
+.cont-table thead,
+.cont-table tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.icon-open {
+	display: block;
+	width: 28px;
+	height: 14px;
+	margin: 12px auto;
+	background: url(../images/open.png) no-repeat center center;
+}
+
+.icon-close {
+	background: url(../images/close.png) no-repeat center center;
+}
+
+.cont-table-action {
+	text-align: center;
+}
+
+.cont-table-action i:not(:last-of-type) {
+	margin-right: 15px;
+}
+
+.cont-table.table-bordered>thead {
+	border-top: 1px solid #ddd;
+}
+
+.cont-table.table-bordered>thead>tr>th {
+	height: 40px;
+	padding: 0 5px;
+	line-height: 40px;
+	font-size: 12px;
+	color: #666666;
+	background: #edf4f7;
+	border-width: 1px;
+}
+
+.table-bordered label {
+	margin: 0;
+}
+
+.table-bordered>tbody>tr {
+	height: 40px;
+}
+
+.table-bordered>tbody>tr>td {
+	height: 40px;
+	padding: 0 5px;
+	font-size: 14px;
+	line-height: 40px;
+	color: #333333;
+	border-top: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.topbar {
+	padding: 20px 40px;
+	margin-bottom: 15px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 6px 0px rgba(51, 51, 51, 0.2);
+}
+
+.topbar .form-group {
+	margin-bottom: 10px;
+}
+
+.topbar .form-control {
+	/*width: 51.505%;*/
+	width: 57.42%;
+	height: 30px;
+	padding: 2px 12px;
+	border-radius: 2px;
+	border: solid 1px #dbdbdb;
+}
+
+.topbar label {
+	width: 98px;
+	text-align: right;
+}
+
+.topbar .btn {
+	width: 72px;
+	height: 30px;
+	padding: 0;
+	margin-left: 16px;
+	line-height: 30px;
+	color: #609cff;
+	background-color: #FFFFFF;
+	border-radius: 2px;
+	border: solid 1px #609cff;
+}
+
+.topbar .btn:hover {
+	color: #FFFFFF;
+	background-color: #609cff;
+}
+
+.topbar .btn-primary i {
+	background: url(../images/search.png) no-repeat center center;
+}
+
+.topbar .btn-primary:hover i {
+	background: url(../images/search2.png) no-repeat center center;
+}
+
+.topbar .btn-default i {
+	background: url(../images/reset_on.png) no-repeat center center;
+}
+
+.topbar .btn-default:hover i {
+	background: url(../images/reset.png) no-repeat center center;
+}
+
+.cont-operate .btn {
+	width: 88px;
+	height: 30px;
+	padding: 0;
+	margin-bottom: 5px;
+	line-height: 30px;
+	color: #609cff;
+	background: #FFFFFF;
+	border-radius: 2px;
+	border: solid 1px #609cff;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+	outline: none;
+}
+
+.cont-operate .btn.active,
+.cont-operate .btn:hover {
+	/*.cont-operate .btn:focus {*/
+	color: #FFFFFF;
+	background-color: #609cff;
+}
+
+input[type=checkbox] {
+	display: none;
+	width: 15px;
+	height: 15px;
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+}
+
+input[type=checkbox]+label::before {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0 8px 0 0;
+	vertical-align: middle;
+	border: solid 1px #cccccc;
+	cursor: pointer;
+	background-color: #FFFFFF;
+	font-size: 14px;
+	line-height: 15px;
+	color: #333333;
+	text-align: center;
+}
+
+input[type=checkbox]:checked+label::before {
+	content: '√';
+}
+
+.modal label {
+	cursor: pointer;
+}
+
+.modal1-list {
+	margin-bottom: 10px;
+	color: #333333;
+}
+
+.modal1-list>label {
+	font-size: 14px;
+	color: #328cff;
+}
+
+.modal1-list>label::after {
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	background-color: #328cff;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.modal1-list ul {
+	padding-left: 40px;
+}
+
+.modal1-list ul label {
+	font-weight: normal;
+}
+
+.modal1-list select {
+	display: inline-block;
+	width: 90px;
+	height: 30px;
+	padding: 4px 12px;
+	border-radius: 2px;
+	border: solid 1px #dbdbdb;
+	vertical-align: middle;
+}
+
+.modal1-list input.form-control {
+	display: inline-block;
+	width: 180px;
+	height: 30px;
+	border-radius: 2px;
+	border: solid 1px #dbdbdb;
+	vertical-align: middle;
+}
+
+.modal1 .btn-primary,
+.modal3 .btn-primary {
+	width: 60px;
+	height: 32px;
+	padding: 0;
+	color: #FFFFFF;
+	background-color: #609cff;
+	border-radius: 2px;
+	border-color: #609cff;
+}
+
+.modal1 .btn-default,
+.modal3 .btn-default {
+	width: 60px;
+	height: 32px;
+	color: #609cff;
+	background-color: #ffffff;
+	border-radius: 2px;
+	border: solid 1px #609cff;
+}
+
+.modal3 .modal-dialog {
+	width: 1212px;
+}
+
+.modal3 .row {
+	padding: 0 15px;
+}
+
+.modal3 .form-group {
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.modal3 .form-control {
+	width: 180px;
+	height: 30px;
+	padding: 2px 12px;
+	border-radius: 2px;
+	border: solid 1px #dbdbdb;
+}
+
+.modal3 .col-md-6 .form-control {
+	width: 476px;
+}
+
+.modal3 .form-group label {
+	width: 98px;
+}
+
+
+/*事件录入*/
+
+.luru .content {
+	height: calc(100% - 105.5px);
+}
+
+.luru .topbar .btn {
+	margin-left: 15px;
+}
+
+.luru .topbar .form-group {
+	margin: 0 10px 0 0;
+}
+
+.luru input[type=checkbox] {
+	width: 15px;
+	height: 15px;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.luru-modal3 .modal-dialog {
+	width: 601px;
+}
+
+.luru-modal3 .modal-dialog label {
+	width: 70px;
+}
+
+.luru-modal3 .modal-dialog .form-control {
+	width: calc(100% - 80px);
+}
+
+.luru .form-control {
+	width: 350px;
+}

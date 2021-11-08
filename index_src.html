@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1024城迹-原始</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<!--header-->
+			<!-- <div class="header clearfix">
+				<div class="logo pull-left"></div>
+				<div class="header-nav">
+					<ul>
+						<li class="header-nav-li active">
+							<a href="index.html">首页</a>
+						</li>
+						<li class="header-nav-li">
+							<a href="renyuan.html">重点管理人员</a>
+						</li>
+						<li class="header-nav-li">
+							<a href="xinxi.html">信息预警</a>
+						</li>
+						<li class="header-nav-li">
+							<a href="jifen.html">积分设置</a>
+						</li>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<i class="icon-notice"><div class="point"></div></i>
+					<i class="icon-sysset"></i>
+					<div class="line"></div>
+					<figure class="pic pull-right"><img src="images/pic.png" />
+						<figcaption class="pull-right">系统管理员</figcaption>
+					</figure>
+				</div>
+			</div> -->
+			<!--header-->
+			<!--content-->
+			<div class="content clearfix">
+				<!--contl-->
+				<!-- <div class="contl">
+					<div class="panel panel-default">
+						<div class="panel-heading">地州分布
+							<div>总人数124人</div>
+						</div>
+						<div class="panel-body">
+							<div id="graph01"></div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">重点级别
+							<div>总人数124人</div>
+						</div>
+						<div class="panel-body">
+							<div class="contl-progress-title">一级重点人<span class="pull-right">36</span></div>
+							<div class="progress contl-progress1">
+								<div class="progress-bar" role="progressbar" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100" style="width: 36%;">
+									<span class="sr-only">36% Complete</span>
+								</div>
+							</div>
+							<div class="contl-progress-title">二级重点人<span class="pull-right">88</span></div>
+							<div class="progress contl-progress2">
+								<div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;">
+									<span class="sr-only">88% Complete</span>
+								</div>
+							</div>
+							<div class="contl-progress-title">三级重点人<span class="pull-right">22</span></div>
+							<div class="progress contl-progress3">
+								<div class="progress-bar" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100" style="width: 22%;">
+									<span class="sr-only">22% Complete</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">涉稳情况分布
+							<div></div>
+						</div>
+						<div class="panel-body">
+							<div id="graph02"></div>
+						</div>
+					</div>
+				</div> -->
+				<!--contl-->
+				<!--contc-->
+				<div class="contc">
+					<!-- <div class="contc-operate">
+						<button class="btn btn-default">布控</button>
+						<button class="btn btn-default">撤控</button>
+						<button class="btn btn-default">事件布控</button>
+					</div> -->
+					<!-- <div class="contc-bar">
+						<form role="form" class="form-inline">
+							<div class="btn-group btn-group-justified pull-left">
+								<div class="btn-group">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								      	重点人员级别
+								      <span class="icon-down"></span>
+								    </button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">一级重点人</a>
+										</li>
+										<li>
+											<a href="#">二级重点人</a>
+										</li>
+										<li>
+											<a href="#">三级重点人</a>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-group">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								      	归属地州
+								      <span class="icon-down"></span>
+								    </button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Dropdown link</a>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-group">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								      	涉稳情况
+								      <span class="icon-down"></span>
+								    </button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Dropdown link</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="input-group pull-right">
+								<input type="text" class="form-control">
+								<span class="input-group-btn">
+							        <button class="btn btn-warning" type="button"><i class="icon-search"></i>查询</button>
+							    </span>
+							</div>
+						</form>
+					</div> -->
+					<div id="graph03"></div>
+				</div>
+				<!--contc-->
+				<!--contr-->
+				<!-- <div class="contr">
+					<div class="panel panel-default">
+						<div class="panel-heading">最新位置分布
+							<div>总人数124人</div>
+						</div>
+						<div class="panel-body">
+							<div id="graph04"></div>
+						</div>
+					</div>
+					<div class="panel panel-default contr-msg">
+						<div class="panel-heading">最新信息</div>
+						<div class="panel-body">
+							<ul id="mytab" class="nav nav-tabs">
+								<li class="active">
+									<a href="#con1" data-toggle="tab">全部</a>
+								</li>
+								<li>
+									<a href="#con2" data-toggle="tab">银行数据</a>
+								</li>
+								<li>
+									<a href="#con3" data-toggle="tab">轨迹信息</a>
+								</li>
+							</ul>-->
+
+							<!-- Tab panes -->
+							<!-- <div class="tab-content">
+								<div class="tab-pane active in active" id="con1">
+									<ul>
+										<li class="contr-con1-li">1<i class="icon-car"></i><span>610581198609098787 2019-05-29 22:20:45</span></li>
+										<li class="contr-con1-li">1<i class="icon-car"></i><span>610581198609098787 2019-05-29 22:20:45</span></li>
+										<li class="contr-con1-li">1<i class="icon-car"></i><span>610581198609098787 2019-05-29 22:20:45</span></li>
+										<li class="contr-con1-li">1<i class="icon-car"></i><span>610581198609098787 2019-05-29 22:20:45</span></li>
+										<li class="contr-con1-li">1<i class="icon-car"></i><span>610581198609098787 2019-05-29 22:20:45</span></li>
+									</ul>
+								</div>
+								<div class="tab-pane" id="con2">...</div>
+								<div class="tab-pane" id="con3">...</div>
+							</div>
+
+						</div>
+					</div>
+				</div> -->
+				<!--contr-->
+			</div>
+			<!--content-->
+		</div>
+
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/china.js"></script>
+		<script>
+			// var graph01 = echarts.init(document.getElementById('graph01'));
+			// var graph02 = echarts.init(document.getElementById('graph02'));
+			// var graph04 = echarts.init(document.getElementById('graph04'));
+			// var option01 = {
+			// 	xAxis: {
+			// 		data: ["地州", "地州", "地州", "地州", "地州", "地州", ],
+			// 		axisTick: {
+			// 			show: false,
+			// 		},
+			// 		axisLine: {
+			// 			show: true,
+			// 			lineStyle: {
+			// 				color: '#dbdbdb',
+			// 				width: 1,
+			// 				type: 'solid'
+			// 			}
+			// 		},
+			// 		axisLabel: {
+			// 			show: true,
+			// 			color: '#666666',
+			// 		}
+			// 	},
+			// 	yAxis: [{
+			// 		axisTick: {
+			// 			show: false
+			// 		},
+			// 		axisLine: {
+			// 			show: false
+			// 		},
+			// 		splitLine: {
+			// 			show: true,
+			// 			lineStyle: {
+			// 				color: '#dbdbdb',
+			// 				width: 1,
+			// 				type: 'dashed'
+			// 			}
+			// 		},
+			// 	}],
+			// 	series: [{
+			// 		type: 'bar',
+			// 		data: [20, 30, 36, 24, 10, 32, ],
+			// 		barWidth: 12,
+			// 		itemStyle: {
+			// 			normal: {
+			// 				color: '#fbc900'
+			// 			}
+			// 		}
+			// 	}],
+			// };
+			// var option02 = {
+			// 	tooltip: {
+			// 		trigger: 'item',
+			// 		formatter: "{a} <br/>{b} : {c} ({d}%)"
+			// 	},
+			// 	legend: {
+			// 		orient: 'vertical',
+			// 		x: 'right',
+			// 		icon: 'circle',
+			// 		itemHeight: 9,
+			// 		data: ['串联', '煽动', '集访', '串联1', '串联2']
+			// 	},
+			// 	calculable: true,
+			// 	series: [{
+			// 		name: '访问来源',
+			// 		type: 'pie',
+			// 		radius: ['50%', '70%'],
+			// 		itemStyle: {
+			// 			normal: {
+			// 				label: {
+			// 					show: false
+			// 				},
+			// 				labelLine: {
+			// 					show: false
+			// 				}
+			// 			},
+			// 			emphasis: {
+			// 				label: {
+			// 					show: true
+			// 				},
+			// 				labelLine: {
+			// 					show: true
+			// 				}
+			// 			}
+			// 		},
+			// 		data: [{
+			// 				value: 14,
+			// 				name: '串联',
+			// 				itemStyle: {
+			// 					normal: {
+			// 						color: '#4ce5ff'
+			// 					}
+			// 				}
+			// 			},
+			// 			{
+			// 				value: 6,
+			// 				name: '煽动',
+			// 				itemStyle: {
+			// 					normal: {
+			// 						color: '#ff4242'
+			// 					}
+			// 				}
+			// 			},
+			// 			{
+			// 				value: 55,
+			// 				name: '集访',
+			// 				itemStyle: {
+			// 					normal: {
+			// 						color: '#66b9ff'
+			// 					}
+			// 				}
+			// 			},
+			// 			{
+			// 				value: 19,
+			// 				name: '串联1',
+			// 				itemStyle: {
+			// 					normal: {
+			// 						color: '#b64dff'
+			// 					}
+			// 				}
+			// 			},
+			// 			{
+			// 				value: 9,
+			// 				name: '串联2',
+			// 				itemStyle: {
+			// 					normal: {
+			// 						color: '#ffbe26'
+			// 					}
+			// 				}
+			// 			}
+			// 		]
+			// 	}]
+			// };
+			// var option04 = {
+			// 	xAxis: {
+			// 		data: ["地州", "地州", "地州", "地州", "地州", "地州", ],
+			// 		axisTick: {
+			// 			show: false,
+			// 		},
+			// 		axisLine: {
+			// 			show: true,
+			// 			lineStyle: {
+			// 				color: '#dbdbdb',
+			// 				width: 1,
+			// 				type: 'solid'
+			// 			}
+			// 		},
+			// 		axisLabel: {
+			// 			show: true,
+			// 			color: '#666666',
+			// 		}
+			// 	},
+			// 	yAxis: [{
+			// 		axisTick: {
+			// 			show: false
+			// 		},
+			// 		axisLine: {
+			// 			show: false
+			// 		},
+			// 		splitLine: {
+			// 			show: true,
+			// 			lineStyle: {
+			// 				color: '#dbdbdb',
+			// 				width: 1,
+			// 				type: 'dashed'
+			// 			}
+			// 		},
+			// 	}],
+			// 	series: [{
+			// 		type: 'bar',
+			// 		data: [20, 30, 36, 24, 10, 32, ],
+			// 		barWidth: 12,
+			// 		itemStyle: {
+			// 			normal: {
+			// 				color: '#e156f1'
+			// 			}
+			// 		}
+			// 	}],
+			// };
+			// graph01.setOption(option01);
+			// graph02.setOption(option02);
+			// graph04.setOption(option04);
+
+			// 动态地图：基于准备好的dom，初始化echarts实例
+			var mapBoxEchart = echarts.init(document.getElementById('graph03'));
+			var geoCoordMap = { //可以在地图上显示的城市的坐标信息
+				'西安': [108.9500, 34.2666],
+				'长春': [125.8154, 44.2584],
+				'长沙': [113.0823, 28.2568],
+				'贵阳': [106.6992, 26.7682],
+				'合肥': [117.29, 32.0581],
+				'济南': [117.1582, 36.8701],
+				'海口': [110.3893, 19.8516],
+				'沈阳': [123.1238, 42.1216],
+				'武汉': [114.3896, 30.6628],
+				'昆明': [102.9199, 25.4663],
+				'杭州': [119.5313, 29.8773],
+				'成都': [103.9526, 30.7617],
+				'拉萨': [91.1865, 30.1465],
+				'天津': [117.4219, 39.4189],
+				'呼和浩特': [111.4124, 40.4901],
+				'哈尔滨': [127.9688, 45.368],
+				'北京': [116.4551, 40.2539],
+				'南京': [118.8062, 31.9208],
+				'南宁': [108.479, 23.1152],
+				'南昌': [116.0046, 28.6633],
+				'乌鲁木齐': [87.9236, 43.5883],
+				'上海': [121.4648, 31.2891],
+				'广州': [113.2333, 23.1666],
+				'重庆': [106.4500, 29.5666],
+				'福州': [119.3000, 26.0833],
+				'兰州': [103.7333, 36.0333],
+				'太原': [112.5333, 37.8666],
+				'西宁': [101.7500, 36.5666],
+				'银川': [106.2666, 38.4666],
+				'郑州': [113.6500, 34.76667],
+				'石家庄': [114.4833, 38.0333],
+				'香港': [114.1000, 22.2000],
+				'澳门': [113.5000, 22.2000],
+				'台北': [121.3000, 25.0300]
+			};
+			var HFData = [ // 数据中name的城市名称必须与geoCoordMap中城市名称一致, 不然关联不上，西安到各地区的线路
+				[{name: '西安'}, {name: '西安', value: 100}],
+				[{name: ''}, {name: '长春', value: 50}],
+				[{name: ''}, {name: '长沙', value: 50}],
+				[{name: ''}, {name: '贵阳', value: 50}],
+				[{name: ''}, {name: '合肥', value: 50}],
+				[{name: ''}, {name: '济南', value: 50}],
+				[{name: ''}, {name: '海口', value: 50}],
+				[{name: ''}, {name: '沈阳', value: 50}],
+				[{name: ''}, {name: '武汉', value: 50}],
+				[{name: ''}, {name: '昆明', value: 50}],
+				[{name: '西安'}, {name: '杭州', value: 50}],
+				[{name: '西安'}, {name: '成都', value: 50}],
+				[{name: ''}, {name: '拉萨', value: 50}],
+				[{name: ''}, {name: '天津', value: 50}],
+				[{name: ''}, {name: '呼和浩特', value: 50}],
+				[{name: ''}, {name: '哈尔滨',value: 50}],
+				[{name: '西安'}, {name: '北京',value: 50}],
+				[{name: '西安'}, {name: '南京',value: 50}],
+				[{name: ''}, {name: '南宁', value: 50}],
+				[{name: ''}, {name: '南昌', value: 50}],
+				[{name: '西安'}, {name: '乌鲁木齐', value: 50}],
+				[{name: '西安'}, {name: '上海', value: 50}],
+				[{name: ''}, {name: '广州', value: 50}],
+				[{name: '西安'}, {name: '重庆', value: 50}],
+				[{name: ''}, {name: '福州', value: 50}],
+				[{name: '西安'}, {name: '兰州', value: 50}],
+				[{name: ''}, {name: '太原', value: 50}],
+				[{name: ''}, {name: '西宁', value: 50}],
+				[{name: ''}, {name: '银川', value: 50}],
+				[{name: ''}, {name: '郑州', value: 50}],
+				[{name: ''}, {name: '石家庄', value: 50}],
+				[{name: ''}, {name: '香港', value: 50}],
+				[{name: ''}, {name: '澳门', value: 50}],
+				[{name: ''}, {name: '台北', value: 50}]
+			];
+			var planePath = 'arrow'; // 箭头的svg
+			// push进去线路开始-结束地点-经纬度
+			var convertData = function(data) {
+				var res = [];
+				for(var i = 0; i < data.length; i++) {
+					var dataItem = data[i];
+					var fromCoord = geoCoordMap[dataItem[0].name];
+					var toCoord = geoCoordMap[dataItem[1].name];
+					if(fromCoord && toCoord) {
+						res.push([{
+							coord: fromCoord
+						}, {
+							coord: toCoord
+						}]);
+					}
+				}
+				return res;
+			};
+			var color = ['#fff', '#FFFFA8', '#46bee9']; //圆圈和字的颜色，线的颜色，箭头颜色
+			// 数据
+			var series = [];
+			// 遍历由西安到其他城市的线路
+			[
+				['西安', HFData]
+			].forEach(function(item, i) {
+				// 配置
+				series.push({
+					// 系列名称，用于tooltip的显示
+					name: item[0],
+					type: 'lines',
+					zlevel: 1, // 用于 Canvas 分层，不同zlevel值的图形会放置在不同的 Canvas 中
+					// effect出发到目的地 的白色尾巴线条
+					// 线特效的配置
+					effect: {
+						show: true,
+						period: 6, // 特效动画的时间，单位为 s
+						trailLength: 0.1, // 特效尾迹的长度。取从 0 到 1 的值，数值越大尾迹越长
+						color: '#46bee9', // 移动箭头颜色
+						symbol: planePath,
+						symbolSize: 6 // 特效标记的大小
+					},
+					// lineStyle出发到目的地 的线条颜色
+					lineStyle: {
+						normal: {
+							color: color[i],
+							width: 0,
+							curveness: 0.2 //幅度
+						}
+					},
+					data: convertData(item[1]) //开始到结束数据
+				}, {
+					//出发地信息
+					name: item[0],
+					type: 'lines',
+					zlevel: 2,
+					effect: {
+						show: true,
+						period: 6,
+						trailLength: 0,
+						symbol: planePath,
+						symbolSize: 6
+					},
+					lineStyle: {
+						normal: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+								offset: 0,
+								color: '#FFFFA8' // 出发
+							}, {
+								offset: 1,
+								color: '#58B3CC ' // 结束 颜色
+							}], false),
+							width: 1.5,
+							opacity: 0.4,
+							curveness: 0.2
+						}
+					},
+					data: convertData(item[1])
+				}, {
+					// 目的地信息
+					name: item[0],
+					type: 'effectScatter',
+					coordinateSystem: 'geo',
+					zlevel: 2,
+					rippleEffect: {
+						brushType: 'stroke'
+					},
+					label: {
+						normal: {
+							show: true,
+							position: 'right',
+							formatter: '{b}'
+						}
+					},
+					symbolSize: function(val) {
+						return val[2] / 8;
+					},
+					itemStyle: {
+						normal: {
+							color: color[i]
+						}
+					},
+					data: item[1].map(function(dataItem) {
+						return {
+							name: dataItem[1].name,
+							value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+						};
+					})
+				});
+			});
+
+			// 指定相关的配置项和数据
+			var mapBoxOption = {
+				backgroundColor:{
+					color: '#00a0c9'
+				},
+				geo: {
+					map: 'china',
+					roam: true, // 是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+					aspectScale: 0.75,
+					zoom: 1.20,
+					label: {
+						normal: {
+							show: false,
+							textStyle: {
+								color: '#00a0c9'
+							}
+						},
+						emphasis: { // 对应的鼠标悬浮效果
+							show: true,
+							textStyle: {
+								color: "#00a0c9"
+							}
+						}
+					},
+					itemStyle: {
+						normal: {
+							areaColor: '#0083ce',
+							borderColor: '#0066ba'
+						},
+						emphasis: {
+							borderWidth: 0,
+							borderColor: '#0066ba',
+							areaColor: "#0494e1",
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				},
+				series: series
+			};
+			// 使用制定的配置项和数据显示图表
+			mapBoxEchart.setOption(mapBoxOption);
+			// echart图表自适应
+			window.addEventListener("resize", function() {
+				// graph01.resize();
+				// graph02.resize();
+				// graph04.resize();
+				mapBoxEchart.resize();
+			});
+		</script>
+	</body>
+
+</html>

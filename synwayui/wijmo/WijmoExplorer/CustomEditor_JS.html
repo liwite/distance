@@ -1,0 +1,174 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0064)http://wijmo.com/wp-content/uploads/2015/09/CustomEditor_JS.html -->
+<!DOCTYPE html PUBLIC "" ""><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+     <TITLE></TITLE>     
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"><!--jQuery References--> 
+    
+
+     <!-- Wijmo references (required) -->     
+
+
+ <!-- jQuery/Angular/Bootstrap -->
+    <script src="/synwayui/jquery/1.11.2/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="/synwayui/angular/1.2.5/angular.min.js" type="text/javascript"></script>
+    <script src="/synwayui/angular/1.2.5/angular-route.min.js" type="text/javascript"></script>
+    <script src="/synwayui/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+    
+     <!-- Wijmo -->
+    <script src="/synwayui/wijmo/5/controls/wijmo.min.js" type="text/javascript"></script>
+    <script src="/synwayui/wijmo/5/controls/wijmo.input.min.js" type="text/javascript"></script>
+    <script src="/synwayui/wijmo/5/controls/wijmo.grid.min.js" type="text/javascript"></script>
+    <script src="/synwayui/wijmo/5/controls/wijmo.chart.min.js" type="text/javascript"></script>
+    <script src="/synwayui/wijmo/5/controls/wijmo.gauge.min.js" type="text/javascript"></script>
+    
+    <link href="/synwayui/wijmo/5/styles/wijmo.min.css" rel="stylesheet" />
+    
+<SCRIPT type="text/javascript">
+        var editIndex = -1;
+        var inputDate, acolindex;
+     
+
+        // get matches for a search term
+        function getData(count, unique) {
+            var data = [];
+            var dt = new Date();
+
+            // add count items
+            for (var i = 0; i < count; i++) {
+
+                // constants used to create data items
+                var date = new Date(dt.getFullYear(), i % 12, 25, i % 24, i % 60, i % 60);
+
+
+                // create the item
+                data.push({
+                    id: i,
+                    date: date,
+                    buttons: ""
+                });
+            }
+            return data;
+        }
+
+
+        function itemFormatter(panel, r, c, cell) {
+        
+      
+        	if (panel.cellType == wijmo.grid.CellType.RowHeader) {
+        		//var row = panel.rows[r];
+        		cell.innerText =  r + 1;
+        		return;
+        	}
+        
+            if (panel.cellType == wijmo.grid.CellType.Cell) {
+                var col = panel.columns[c],
+                    html = cell.innerHTML;
+                if (r == editIndex) {
+                    switch (col.name) {
+                        case 'buttons':
+                            html = '<div>' +
+                                   '&nbsp;&nbsp;' +
+                                   '<button class="btn btn-primary btn-sm" onclick="commitRow(' + r + ')">' +
+                                       '<span class="glyphicon glyphicon-ok"></span> OK' +
+                                   '</button>' +
+                               '</div>';
+                            break;
+                        case 'date':
+                            acolindex = c;
+                            html = '<input id="theDate" />';
+                            setTimeout(function () {
+                                $("#theDate").keydown(function (args) {
+                                    if (args.which == 9) {
+                                        // find the cell from its bounding rectangle
+                                        var rc = flex.getCellBoundingRect(r, 2);
+                                        var cell = document.elementFromPoint(rc.left + rc.width / 2, rc.top + rc.height / 2);
+
+                                        // make sure this is a regular cell (not a header)
+                                        if (wijmo.hasClass(cell, 'wj-header')) {
+                                            cell = null;
+                                        }
+
+                                        // make sure this is not an element within a cell
+                                        while (cell && !wijmo.hasClass(cell, 'wj-cell')) {
+                                            cell = cell.parentElement;
+                                        }
+                                        cell.childNodes[0].focus();
+                                    }
+                                });
+                            }, 20);
+                            break;
+                    }
+                } else {
+                    switch (col.name) {
+                        case 'buttons':
+                            cell.style.padding = '3px';
+                            html = '<div>' +
+                                   '&nbsp;&nbsp;' +
+                                   '<button class="btn btn-default btn-sm" onclick="editRow(' + r + ')">' +
+                                       '<span class="glyphicon glyphicon-pencil"></span> Edit' +
+                                   '</button>' +
+                               '</div>';
+                            break;
+                    }
+                }
+
+                if (html != cell.innerHTML) {
+                    cell.innerHTML = html;
+                    if (col.name == "date") {
+                        inputDate = new wijmo.input.InputDate("#theDate");
+                        inputDate.value = new Date(panel.getCellData(r, c, true));
+                    }
+                    cell.style.padding = '3px';
+                }
+            }
+            //flex.endUpdate();
+        }
+
+        function editRow(row) {
+            editIndex = row;
+            flex.invalidate();
+        }
+
+        function commitRow(row) {
+
+            // save changes
+            flex.setCellData(row, 'date', inputDate.value);
+
+            // done editing
+            cancelRow(row);
+
+            //Get the updated values in collection view.
+            var cv = flex.collectionView;
+        }
+        function cancelRow(row) {
+            editIndex = -1;
+            flex.invalidate();
+        }
+        var flex;
+        $(document).ready(function () {
+            flex = new wijmo.grid.FlexGrid("#flexgrid");
+            flex.initialize({
+                autoGenerateColumns: false,
+                selectionMode: "Row",
+                itemsSource: getData(2000),
+                
+                columns: [
+                    { header: 'ID', name: "id", binding: 'id', width: '*' },
+                    { header: 'Date', name: "date", binding: 'date', width: '*' },
+                    { header: 'Buttons', binding: "buttons", name: "buttons", width: '*' }],
+                isReadOnly: true,
+                itemFormatter: itemFormatter
+            });
+            
+            // add 1 columns to the row header panels            
+           // flex.rowHeaders.columns.insert(0, new wijmo.grid.Column());
+           
+          
+        });
+    </SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.9600.17416"></HEAD> 
+<BODY>
+<DIV id="flexgrid"></DIV></BODY></HTML>

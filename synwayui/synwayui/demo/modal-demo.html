@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    
+	<link href="/synwayui/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/synwayui/bootstrap/3.3.4/assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/synwayui/themes/default/css/common.css" rel="stylesheet">
+	<script src="/synwayui/jquery/1.11.2/jquery-1.11.2.js"></script>
+	<script src="/synwayui/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="/synwayui/synwayui/synwayui.js"></script>
+	
+	
+	<script src="/synwayui/angular/1.2.5/angular.js"></script>
+
+	
+	
+	<script src="js/demo.js" type="text/javascript"></script>
+	
+</head>
+  
+  <body>
+ <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+ 显示对话框
+</button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title syn-modal-title" id="myModalLabel">标题</h4>
+      </div>
+      <div class="modal-body">
+        <div class="well">
+        <ul>
+			<li>1.	顶部高度：50px；</li>
+			<li>2.	标题：16px 微软雅黑 # 337ab7；标题垂直居中对齐，距左侧：15px，样式采用： syn-modal-title</li>
+			<li>3.	关闭按钮：垂直居右对齐，距右侧15px，样式采用：btn btn-default btn-l</li>
+			<li>4.	提交按钮：垂直居右对齐，距右侧15px，样式采用：btn btn-primary btn-l</li>
+			<li>5.	关闭按钮在提交按钮左侧</li>
+			<li>6.	表单最大高度不得超过720px</li>
+        </ul>
+        
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-l" data-dismiss="modal" >关闭(or 取消)</button>
+        <button type="button" class="btn btn-primary btn-l" >提交(or 确定)</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  </body>
+</html>
